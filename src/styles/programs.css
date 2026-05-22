@@ -1,7 +1,7 @@
 /* Programs */
-.programs-section { 
-    background: var(--dark); 
-    padding: 100px 0;
+.programs-section {
+    background: var(--dark);
+    padding: 80px 0;
     position: relative;
 }
 
@@ -173,7 +173,11 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .programs-section { padding: 60px 0; }
+}
 @media (max-width: 768px) {
+    .programs-section { padding: 40px 0; }
     .programs-grid-3 .program-card:last-child {
         grid-column: auto;
         justify-self: auto;
