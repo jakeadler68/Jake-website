@@ -51,11 +51,16 @@ const reviews = [
   { id: 46, category: '1on1', text: `“Thank you very much — your class is very interesting.”`, avatar: 'G', name: 'Parent of Gary', meta: 'Nov 2018' }
 ]
 
-const videoTestimonials = [
-  { id: 1, img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&h=225&fit=crop', name: 'Lin', meta: 'Mother of Leo, age 8', text: 'Video: Lin shares how her son overcame his fear of speaking English' },
-  { id: 2, img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=225&fit=crop', name: 'Chen', meta: 'Father of Sophie, age 12', text: 'Video: Chen discusses her daughter thinking in English' },
-  { id: 3, img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=225&fit=crop', name: 'Huang', meta: 'Father of Ryan, age 13', text: 'Video: Huang shares his son debate competition journey' }
-]
+// VIDEO TESTIMONIALS — restore this section when real client video clips are available.
+// Format: { id, img (thumbnail URL), name (parent name), meta (e.g. "Mother of Leo, age 8"), text (video description) }
+// Rendered as a 3-column grid of clickable thumbnail cards with a play button overlay.
+// Re-add the JSX block below (search "VIDEO SECTION") and restore the onOpenVideo prop call.
+//
+// const videoTestimonials = [
+//   { id: 1, img: 'thumbnail-url', name: 'Lin',   meta: 'Mother of Leo, age 8',    text: 'Video: ...' },
+//   { id: 2, img: 'thumbnail-url', name: 'Chen',  meta: 'Father of Sophie, age 12', text: 'Video: ...' },
+//   { id: 3, img: 'thumbnail-url', name: 'Huang', meta: 'Father of Ryan, age 13',   text: 'Video: ...' },
+// ]
 
 export default function ReviewsSection({ onOpenVideo }) {
   useReveal()
@@ -176,6 +181,7 @@ export default function ReviewsSection({ onOpenVideo }) {
           ))}
         </div>
 
+        {/* VIDEO SECTION — uncomment when real client video clips are available.
         <div style={{ marginTop: 48 }}>
           <h3 className="section-title reveal" style={{ fontSize: '1.6rem' }}>Hear from clients directly</h3>
           <p className="section-desc reveal" style={{ marginBottom: 24 }}>Short video testimonials from families who've seen the transformation.</p>
@@ -192,6 +198,7 @@ export default function ReviewsSection({ onOpenVideo }) {
             ))}
           </div>
         </div>
+        */}
       </div>
     </section>
   )
