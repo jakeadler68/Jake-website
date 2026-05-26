@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { useLanguage } from '../LanguageContext'
 import '../styles/modals.css'
 import '../styles/contact-form.css'
 
@@ -8,6 +9,9 @@ const EMAILJS_SERVICE_ID = 'service_b56f55o'
 const EMAILJS_TEMPLATE_ID = 'template_32tqtsc'
 
 export default function ContactForm({ isOpen, onClose }) {
+  const { t } = useLanguage()
+  const cf = t.contactForm
+
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(null)
@@ -35,148 +39,142 @@ export default function ContactForm({ isOpen, onClose }) {
       formRef.current.reset()
       setTimeout(() => setSubmitted(false), 4000)
     } catch {
-      setError('Something went wrong. Please try again or contact us directly.')
+      setError(cf.error)
     } finally {
       setSending(false)
     }
-  }, [])
+  }, [cf.error])
 
   if (!isOpen) return null
+
+  const goalKeys = ['confidence', 'academic', 'ielts', 'conversation', 'other']
+  const dayKeys = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
   return (
     <div className="contact-modal open" onClick={onClose}>
       <button className="contact-modal-close" onClick={onClose} aria-label="Close">&times;</button>
       <div className="contact-modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="enquiry-info">
-          <span className="section-label">Get Started</span>
-          <h2 className="section-title">Start With an Assessment</h2>
-          <p className="section-desc">This first session helps us understand your level, identify strengths, and recommend the right path forward.</p>
+          <span className="section-label">{cf.getStarted}</span>
+          <h2 className="section-title">{cf.title}</h2>
+          <p className="section-desc">{cf.desc}</p>
           <div className="enquiry-benefits">
             <div className="enquiry-benefit">
               <span className="benefit-check">✓</span>
-              <span>Free level assessment in your trial session</span>
+              <span>{cf.benefit1}</span>
             </div>
             <div className="enquiry-benefit">
               <span className="benefit-check">✓</span>
-              <span>Personalized program recommendation</span>
+              <span>{cf.benefit2}</span>
             </div>
             <div className="enquiry-benefit">
               <span className="benefit-check">✓</span>
-              <span>No obligation - we help you decide what's best</span>
+              <span>{cf.benefit3}</span>
             </div>
           </div>
-          <p className="enquiry-key-line">This isn't a sample. It's a structured starting point.</p>
+          <p className="enquiry-key-line">{cf.keyLine}</p>
         </div>
         <div className="enquiry-form-wrapper">
           <form ref={formRef} className="enquiry-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
-                <label>Name</label>
-                <input type="text" name="name" placeholder="Enter name" required />
+                <label>{cf.labels.name}</label>
+                <input type="text" name="name" placeholder={cf.placeholders.name} required />
               </div>
               <div className="form-group">
-                <label>Age</label>
-                <input type="text" name="age" placeholder="e.g., 12 or 34" required />
+                <label>{cf.labels.age}</label>
+                <input type="text" name="age" placeholder={cf.placeholders.age} required />
               </div>
             </div>
             <div className="form-group">
-              <label>Current English Level</label>
+              <label>{cf.labels.level}</label>
               <div className="select-wrapper">
                 <select name="level" required defaultValue="">
-                  <option value="" disabled>Select current level</option>
-                  <option value="beginner">Beginner</option>
-                  <option value="elementary">Elementary</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="upper-intermediate">Upper-Intermediate</option>
-                  <option value="advanced">Advanced</option>
+                  {cf.levelOptions.map(opt => (
+                    <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+                  ))}
                 </select>
               </div>
             </div>
             <div className="form-group">
-              <label>Main Goal</label>
+              <label>{cf.labels.goal}</label>
               <div className="checkbox-group">
-                {['confidence', 'academic', 'ielts', 'conversation', 'other'].map(g => (
+                {goalKeys.map(g => (
                   <label key={g} className="checkbox-item">
-                    <input type="checkbox" name="goal" value={g} /> {g.charAt(0).toUpperCase() + g.slice(1)}
+                    <input type="checkbox" name="goal" value={g} /> {cf.goals[g]}
                   </label>
                 ))}
               </div>
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label>Available Days</label>
+                <label>{cf.labels.days}</label>
                 <div className="day-checkboxes">
-                  {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(d => (
+                  {dayKeys.map(d => (
                     <label key={d} className="day-checkbox-item">
                       <input type="checkbox" name="days" value={d} />
-                      <span>{d.slice(0, 3)}</span>
+                      <span>{cf.days[d]}</span>
                     </label>
                   ))}
                 </div>
               </div>
               <div className="form-group">
-                <label>Preferred Time</label>
+                <label>{cf.labels.time}</label>
                 <div className="select-wrapper">
                   <select name="preferred_time" defaultValue="">
-                    <option value="" disabled>Select time</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
+                    {cf.timeOptions.map(opt => (
+                      <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+                    ))}
                   </select>
                 </div>
               </div>
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label>Contact Email</label>
-                <input type="email" name="email" placeholder="your@email.com" required />
+                <label>{cf.labels.email}</label>
+                <input type="email" name="email" placeholder={cf.placeholders.email} required />
               </div>
               <div className="form-group">
-                <label>Contact Number <span className="field-optional">(optional)</span></label>
-                <input type="tel" name="phone" placeholder="Phone / WeChat ID" />
+                <label>{cf.labels.phone} <span className="field-optional">{cf.optional}</span></label>
+                <input type="tel" name="phone" placeholder={cf.placeholders.phone} />
               </div>
             </div>
             <div className="form-row">
               <div className="form-group">
-                <label>Interested Program</label>
+                <label>{cf.labels.program}</label>
                 <div className="select-wrapper">
                   <select name="program" defaultValue="">
-                    <option value="" disabled>Select a program</option>
-                    <option value="group">Group Sessions</option>
-                    <option value="coaching">1-on-1 Coaching</option>
-                    <option value="jake">1-on-1 Intensive</option>
-                    <option value="ielts">IELTS Specialist</option>
-                    <option value="unsure">Not sure yet</option>
+                    {cf.programOptions.map(opt => (
+                      <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+                    ))}
                   </select>
                 </div>
               </div>
               <div className="form-group">
-                <label>When Do You Want to Start? <span className="field-optional">(optional)</span></label>
+                <label>{cf.labels.startTime} <span className="field-optional">{cf.optional}</span></label>
                 <div className="select-wrapper">
                   <select name="start_time" defaultValue="">
-                    <option value="" disabled>Select timeframe</option>
-                    <option value="asap">As soon as possible</option>
-                    <option value="1-2-weeks">Within 1-2 weeks</option>
-                    <option value="1-month">Within a month</option>
-                    <option value="flexible">Flexible</option>
+                    {cf.startOptions.map(opt => (
+                      <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+                    ))}
                   </select>
                 </div>
               </div>
             </div>
             <div className="form-group">
-              <label>Previous English Experience <span className="field-optional">(optional)</span></label>
-              <input type="text" name="experience" placeholder="e.g., 2 years of English coaching" />
+              <label>{cf.labels.experience} <span className="field-optional">{cf.optional}</span></label>
+              <input type="text" name="experience" placeholder={cf.placeholders.experience} />
             </div>
             <div className="form-group">
-              <label>Any Extra Notes <span className="field-optional">(optional)</span></label>
-              <textarea name="notes" placeholder="Tell us anything else about your needs..." rows="3"></textarea>
+              <label>{cf.labels.notes} <span className="field-optional">{cf.optional}</span></label>
+              <textarea name="notes" placeholder={cf.placeholders.notes} rows="3"></textarea>
             </div>
             {error && <p className="form-error" style={{ color: '#c0392b', fontSize: '0.9rem', marginBottom: '0.5rem' }}>{error}</p>}
             <button type="submit" className="form-submit" disabled={sending} style={submitted ? { background: '#2d7a4f', color: '#fff' } : {}}>
-              {sending ? 'Sending...' : submitted ? "Enquiry received. We'll be in touch within 24 hours." : 'SUBMIT ENQUIRY'}
+              {sending ? cf.sending : submitted ? cf.submitted : cf.submit}
             </button>
-            <p className="form-note">{submitted ? '' : "We'll respond within 24 hours to schedule your trial assessment."}</p>
-            <p className="form-privacy">By submitting this form, you consent to us contacting you regarding your enquiry. We respect your privacy and will not share your information.</p>
+            <p className="form-note">{submitted ? '' : cf.note}</p>
+            <p className="form-privacy">{cf.privacy}</p>
           </form>
         </div>
       </div>

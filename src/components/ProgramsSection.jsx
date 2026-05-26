@@ -1,35 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
 import useReveal from '../hooks/useReveal'
+import { useLanguage } from '../LanguageContext'
 import '../styles/programs.css'
-
-const programs = [
-  {
-    key: 'group',
-    tag: 'GROUP WORKSHOPS',
-    name: 'Group Workshops',
-    highlight: 'Shared-room practice',
-    desc: 'Small groups (usually 3–6 students) focused on speaking, understanding, and confidence.',
-    badge: 'MOST POPULAR',
-  },
-  {
-    key: 'coaching',
-    tag: '1-ON-1 COACHING',
-    name: '1-on-1 Coaching',
-    highlight: 'Personal pace & topics',
-    desc: 'Fully personalized sessions focused on clear expression and real communication.',
-    badge: 'LIMITED AVAILABILITY',
-  },
-  {
-    key: 'ielts',
-    tag: 'SPECIALIST',
-    name: 'IELTS Specialist',
-    highlight: 'Score-focused prep',
-    desc: 'Focused preparation for IELTS Academic and General Training.',
-  },
-]
 
 export default function ProgramsSection({ onOpenProgram }) {
   useReveal()
+  const { t } = useLanguage()
+  const p = t.programs
+  const programs = p.items
+
   const [selected, setSelected] = useState('group')
   const [activeIndex, setActiveIndex] = useState(0)
   const gridRef = useRef(null)
@@ -37,7 +16,7 @@ export default function ProgramsSection({ onOpenProgram }) {
   useEffect(() => {
     const el = gridRef.current
     if (!el) return
-    
+
     let raf = 0
     const onScroll = () => {
       if (raf) return
@@ -45,7 +24,7 @@ export default function ProgramsSection({ onOpenProgram }) {
         raf = 0
         const card = el.firstElementChild
         if (!card) return
-        const width = card.getBoundingClientRect().width + 14 // 14 is gap
+        const width = card.getBoundingClientRect().width + 14
         const idx = Math.round(el.scrollLeft / width)
         setActiveIndex(Math.max(0, Math.min(programs.length - 1, idx)))
       })
@@ -56,7 +35,7 @@ export default function ProgramsSection({ onOpenProgram }) {
       el.removeEventListener('scroll', onScroll)
       if (raf) cancelAnimationFrame(raf)
     }
-  }, [])
+  }, [programs.length])
 
   const scrollToIndex = (idx) => {
     const el = gridRef.current
@@ -74,14 +53,14 @@ export default function ProgramsSection({ onOpenProgram }) {
     <section className="programs-section" id="programs">
       <div className="container">
         <div className="reveal">
-          <span className="section-label">PROGRAMS</span>
-          <h2 className="section-title">Three programs. One commitment.</h2>
-          <p className="section-desc">Every program is personalised to the individual's level. Choose what works best for you.</p>
+          <span className="section-label">{p.label}</span>
+          <h2 className="section-title">{p.title}</h2>
+          <p className="section-desc">{p.desc}</p>
         </div>
-        
+
         <div className="programs-carousel-wrapper">
-          <button 
-            className={`programs-arrow programs-arrow-prev${activeIndex === 0 ? ' disabled' : ''}`} 
+          <button
+            className={`programs-arrow programs-arrow-prev${activeIndex === 0 ? ' disabled' : ''}`}
             onClick={prev}
             aria-label="Previous program"
           >
@@ -89,32 +68,32 @@ export default function ProgramsSection({ onOpenProgram }) {
           </button>
 
           <div className="programs-grid programs-grid-3" ref={gridRef}>
-            {programs.map((p, i) => (
+            {programs.map((prog, i) => (
               <div
-                key={p.key}
-                className={`program-card reveal${i ? ` reveal-delay-${i}` : ''}${selected === p.key ? ' featured' : ''}`}
-                onClick={() => setSelected(p.key)}
+                key={prog.key}
+                className={`program-card reveal${i ? ` reveal-delay-${i}` : ''}${selected === prog.key ? ' featured' : ''}`}
+                onClick={() => setSelected(prog.key)}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelected(p.key) } }}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelected(prog.key) } }}
               >
-                {p.badge && <div className="program-badge">{p.badge}</div>}
-                <div className="program-age">{p.tag}</div>
-                <h3 className="program-name">{p.name}</h3>
-                <div className="program-highlight">{p.highlight}</div>
-                <p className="program-desc">{p.desc}</p>
+                {prog.badge && <div className="program-badge">{prog.badge}</div>}
+                <div className="program-age">{prog.tag}</div>
+                <h3 className="program-name">{prog.name}</h3>
+                <div className="program-highlight">{prog.highlight}</div>
+                <p className="program-desc">{prog.desc}</p>
                 <button
                   className="program-cta"
-                  onClick={(e) => { e.stopPropagation(); onOpenProgram(p.key) }}
+                  onClick={(e) => { e.stopPropagation(); onOpenProgram(prog.key) }}
                 >
-                  Learn More
+                  {p.learnMore}
                 </button>
               </div>
             ))}
           </div>
 
-          <button 
-            className={`programs-arrow programs-arrow-next${activeIndex === programs.length - 1 ? ' disabled' : ''}`} 
+          <button
+            className={`programs-arrow programs-arrow-next${activeIndex === programs.length - 1 ? ' disabled' : ''}`}
             onClick={next}
             aria-label="Next program"
           >

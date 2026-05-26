@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useLanguage } from '../LanguageContext'
 import '../styles/navbar.css'
 
 export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenContact, forceDark }) {
+  const { t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -22,11 +24,11 @@ export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenConta
               <span className={`lang-text ${lang === 'en' ? 'active' : ''}`}>EN</span>
             </button>
           </li>
-          <li><a href="#how-it-works">Method</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#reviews">Results</a></li>
-          <li><button type="button" className="nav-cta" onClick={onOpenContact}>Apply Now</button></li>
+          <li><a href="#how-it-works">{t.nav.method}</a></li>
+          <li><a href="#programs">{t.nav.programs}</a></li>
+          <li><a href="#about">{t.nav.about}</a></li>
+          <li><a href="#reviews">{t.nav.results}</a></li>
+          <li><button type="button" className="nav-cta" onClick={onOpenContact}>{t.nav.applyNow}</button></li>
         </ul>
         <button className="mobile-toggle" onClick={onToggleMobile} aria-label="Menu">
           <span></span><span></span><span></span>

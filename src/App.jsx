@@ -15,6 +15,8 @@ import ContactForm from './components/ContactForm'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import CoachesPage from './components/CoachesPage'
+import { LanguageContext } from './LanguageContext'
+import { translations } from './translations'
 
 const getRoute = () => (window.location.hash === '#coaches' ? 'coaches' : 'home')
 
@@ -89,7 +91,7 @@ export default function App() {
   const closeContact = useCallback(() => setContactOpen(false), [])
 
   return (
-    <>
+    <LanguageContext.Provider value={{ lang, t: translations[lang] }}>
       <Navbar onToggleMobile={toggleMobile} onToggleLang={toggleLang} lang={lang} onOpenContact={openContact} forceDark={route === 'coaches'} />
       <MobileMenu isOpen={mobileOpen} onToggleMobile={toggleMobile} onOpenContact={openContact} />
       <div style={{ display: route === 'home' ? 'contents' : 'none' }}>
@@ -108,6 +110,6 @@ export default function App() {
       {route === 'coaches' && <CoachesPage onOpenContact={openContact} />}
       <Footer onOpenContact={openContact} />
       <ContactForm isOpen={contactOpen} onClose={closeContact} />
-    </>
+    </LanguageContext.Provider>
   )
 }

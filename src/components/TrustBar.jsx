@@ -1,31 +1,31 @@
-
-
 import useReveal from '../hooks/useReveal'
-
+import { useLanguage } from '../LanguageContext'
 import '../styles/trust-bar.css'
 
 export default function TrustBar() {
   useReveal()
- 
+  const { t } = useLanguage()
+  const tb = t.trustBar
+
   return (
     <div className="trust-bar" id="trust">
       <div className="container">
         <div className="trust-items">
           <div className="trust-item reveal">
-            <strong>NO COMMITMENT</strong>
-            Clear level assessment in first session
+            <strong>{tb.item1strong}</strong>
+            {tb.item1}
           </div>
           <div className="trust-item reveal reveal-delay-1">
-            <strong>EXPRESSION FIRST</strong>
-            Focus on communication, not memorization
+            <strong>{tb.item2strong}</strong>
+            {tb.item2}
           </div>
           <div className="trust-item reveal reveal-delay-2">
-            <strong>INDIVIDUAL FOCUS</strong>
-            Individual focus, even in groups
+            <strong>{tb.item3strong}</strong>
+            {tb.item3}
           </div>
           <div className="trust-item reveal reveal-delay-3">
-            <strong>10+ YEARS</strong>
-            Years experience for each coach
+            <strong>{tb.item4strong}</strong>
+            {tb.item4}
           </div>
         </div>
       </div>
