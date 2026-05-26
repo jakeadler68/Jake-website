@@ -1,11 +1,11 @@
-
-
 import useReveal from '../hooks/useReveal'
-
+import { useLanguage } from '../LanguageContext'
 import '../styles/footer.css'
 
 export default function Footer({ onOpenContact }) {
   useReveal()
+  const { t } = useLanguage()
+  const f = t.footer
 
   return (
     <footer>
@@ -13,51 +13,51 @@ export default function Footer({ onOpenContact }) {
         <div className="footer-cols">
           <div className="footer-col footer-col-brand">
             <div className="footer-brand">Exprim<span>io</span></div>
-            <p className="footer-slogan">Express your premium English.</p>
-            <p className="footer-mission">High-end, expression-first English language coaching designed for ambitious learners.</p>
+            <p className="footer-slogan">{f.slogan}</p>
+            <p className="footer-mission">{f.mission}</p>
           </div>
 
           <div className="footer-col">
-            <h5 className="footer-col-title">Quick Links</h5>
+            <h5 className="footer-col-title">{f.quickLinks}</h5>
             <ul className="footer-col-links">
-              <li><a href="#programs">Programs &amp; Sessions</a></li>
-              <li><a href="#programs">1-on-1 Coaching</a></li>
-              <li><a href="#programs">Group Workshops</a></li>
-              <li><button type="button" className="footer-link-btn" onClick={onOpenContact}>Apply Now</button></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#how-it-works">Our Philosophy</a></li>
-              <li><a href="#how-it-works">The Method</a></li>
-              <li><button type="button" className="footer-link-btn" onClick={onOpenContact}>Contact</button></li>
+              <li><a href="#programs">{f.links[0]}</a></li>
+              <li><a href="#programs">{f.links[1]}</a></li>
+              <li><a href="#programs">{f.links[2]}</a></li>
+              <li><button type="button" className="footer-link-btn" onClick={onOpenContact}>{f.links[3]}</button></li>
+              <li><a href="#about">{f.links[4]}</a></li>
+              <li><a href="#how-it-works">{f.links[5]}</a></li>
+              <li><a href="#how-it-works">{f.links[6]}</a></li>
+              <li><button type="button" className="footer-link-btn" onClick={onOpenContact}>{f.links[7]}</button></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h5 className="footer-col-title">Contact &amp; Support</h5>
+            <h5 className="footer-col-title">{f.contactTitle}</h5>
             <ul className="footer-col-links">
               <li><a href="mailto:hello@exprimio.com">hello@exprimio.com</a></li>
               <li className="footer-wechat">WeChat ID: <span>exprimio</span></li>
-              <li className="footer-hours">Hours: Monday - Friday<br />9:00 AM - 6:00 PM CST</li>
+              <li className="footer-hours" style={{ whiteSpace: 'pre-line' }}>{f.hours}</li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h5 className="footer-col-title">Legal</h5>
+            <h5 className="footer-col-title">{f.legalTitle}</h5>
             <ul className="footer-col-links">
-              <li><a href="#terms">Terms &amp; Conditions</a></li>
-              <li><a href="#privacy">Privacy &amp; Media Policy</a></li>
-              <li><a href="#refund">Refund Policy</a></li>
+              <li><a href="#terms">{f.legalLinks[0]}</a></li>
+              <li><a href="#privacy">{f.legalLinks[1]}</a></li>
+              <li><a href="#refund">{f.legalLinks[2]}</a></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom reveal">
-          <span className="footer-copy">© 2026 Exprimio. All rights reserved.</span>
+          <span className="footer-copy">{f.copyright}</span>
           <span className="footer-copy footer-bottom-links">
-            <a href="#terms">Terms of Use</a>
+            <a href="#terms">{f.termsOfUse}</a>
             <span className="footer-divider">|</span>
-            <a href="#privacy">Privacy Policy</a>
+            <a href="#privacy">{f.privacyPolicy}</a>
             <span className="footer-divider">|</span>
-            <a href="#cookies">Cookie Settings</a>
+            <a href="#cookies">{f.cookieSettings}</a>
           </span>
         </div>
       </div>
