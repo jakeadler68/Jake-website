@@ -21,15 +21,27 @@ nav.scrolled {
     justify-content: space-between;
     height: 80px;
 }
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1.15;
+}
 .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.75rem;
     font-weight: 500;
     color: var(--white);
-    text-decoration: none;
     letter-spacing: 0.05em;
 }
 .nav-logo span { color: var(--gold); }
+.nav-slogan {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+}
 .nav-links {
     display: flex;
     align-items: center;

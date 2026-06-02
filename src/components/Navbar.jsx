@@ -15,7 +15,10 @@ export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenConta
   return (
     <nav className={scrolled || forceDark ? 'scrolled' : ''}>
       <div className="nav-inner">
-        <a href="#" className="nav-logo">Expr<span>imio</span></a>
+        <a href="#" className="nav-brand">
+          <span className="nav-logo">Expr<span>imio</span></span>
+          <span className="nav-slogan">{t.footer.slogan}</span>
+        </a>
         <ul className="nav-links">
           <li>
             <button className="nav-lang-toggle" onClick={onToggleLang}>

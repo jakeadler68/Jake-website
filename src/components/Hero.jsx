@@ -18,8 +18,7 @@ export default function Hero({ onOpenContact }) {
           <h1 className="reveal reveal-delay-1">
             {h.h1} <em>{h.h1em}</em>
           </h1>
-          <p className="hero-sub reveal reveal-delay-2">{h.sub}</p>
-          <div className="hero-actions reveal reveal-delay-3">
+          <div className="hero-actions reveal reveal-delay-2">
             <button type="button" className="btn-primary" onClick={onOpenContact}>{h.applyNow}</button>
             <a href="#how-it-works" className="btn-secondary">{h.seeHow}</a>
           </div>
