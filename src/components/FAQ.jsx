@@ -31,7 +31,7 @@ export default function FAQ() {
                   <div className="faq-icon"></div>
                 </button>
                 <div className="faq-answer">
-                  <p>{faq.a}</p>
+                  {faq.a.split('\n\n').map((para, j) => <p key={j}>{para}</p>)}
                 </div>
               </div>
             ))}

@@ -263,6 +263,7 @@ export const translations = {
         { q: 'How does a session work?', a: 'Sessions are conducted online via ClassIn, our primary coaching platform, allowing for flexibility and consistency regardless of location. Sessions run from 30 minutes up to 2 hours depending on the program. We keep our schedule intentionally limited to maintain quality.' },
         { q: 'How much does it cost?', a: 'Pricing varies by program and session frequency. We share all details during the trial consultation. We understand this is a significant commitment, which is why we offer a trial session first-so you can experience the method before making any decision.' },
         { q: 'How do I know they\'re improving?', a: 'Every program includes regular progress updates. You receive reports covering areas of growth, current focus, and actionable suggestions for real-world practice. Frequency depends on the program you choose.' },
+        { q: 'What learning materials do you use?', a: 'Following an initial assessment, learning materials are selected based on each student\'s age, English level, academic needs, and learning goals.\n\nOur instructors use a combination of internationally recognized resources from publishers such as Cambridge, National Geographic Learning, Oxford, and other trusted educational providers. Depending on the student\'s needs, lessons may incorporate structured curriculum materials, reading programs, speaking activities, exam preparation resources, or customized content.\n\nWe do not believe every student should follow the same textbook. Instead, materials are chosen to provide the right balance of challenge, engagement, and measurable progress for each learner.\n\nAs students develop, materials may be adjusted to reflect changing goals, strengths, and areas for improvement. We also welcome discussion regarding school materials or other learning resources that families would like us to consider.\n\nIf you have questions about our curriculum or material selection process, please feel free to contact us.' },
       ],
     },
 
@@ -635,6 +636,7 @@ export const translations = {
         { q: '课程是如何进行的？', a: '课程通过ClassIn在线进行，这是我们的主要辅导平台，无论身处何地都能保持灵活性和一致性。课程时长从30分钟到2小时不等，具体取决于课程项目。我们有意控制排课数量，以保证质量。' },
         { q: '费用是多少？', a: '费用因课程项目和上课频率而异。我们在试课咨询时分享所有详情。我们理解这是一项重大承诺，因此我们首先提供试课——让你在做任何决定之前先体验我们的方法。' },
         { q: '如何知道他们在进步？', a: '每个课程项目都包含定期进度更新。你会收到涵盖成长领域、当前重点和真实世界练习建议的报告。频率取决于你选择的课程项目。' },
+        { q: '你们使用什么教学材料？', a: '在完成初始评估后，我们会根据每位学员的年龄、英语水平、学术需求和学习目标来选择教学材料。\n\n我们的教师综合使用来自剑桥大学出版社、国家地理学习、牛津大学出版社等国际知名出版商及其他可信教育机构的资源。根据学员需求，课程可能涵盖结构化课程材料、阅读计划、口语活动、考试备考资源或定制内容。\n\n我们不认为每位学员都应使用相同的教材，而是根据每位学员的实际情况，选择能提供合理挑战、持续参与和可见进步的最佳材料。\n\n随着学员的成长，材料会根据目标变化、优势发展和待提升领域进行调整。我们也欢迎就学员的学校材料或家庭希望纳入的其他学习资源进行交流。\n\n如有关于课程设置或材料选择的问题，欢迎随时联系我们。' },
       ],
     },
 
