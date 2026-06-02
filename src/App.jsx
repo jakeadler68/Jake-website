@@ -93,7 +93,7 @@ export default function App() {
   return (
     <LanguageContext.Provider value={{ lang, t: translations[lang] }}>
       <Navbar onToggleMobile={toggleMobile} onToggleLang={toggleLang} lang={lang} onOpenContact={openContact} forceDark={route === 'coaches'} />
-      <MobileMenu isOpen={mobileOpen} onToggleMobile={toggleMobile} onOpenContact={openContact} />
+      <MobileMenu isOpen={mobileOpen} onToggleMobile={toggleMobile} onOpenContact={openContact} onToggleLang={toggleLang} lang={lang} />
       <div style={{ display: route === 'home' ? 'contents' : 'none' }}>
         <Hero onOpenContact={openContact} />
         <TrustBar />
