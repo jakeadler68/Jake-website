@@ -84,6 +84,7 @@
 @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; }
     .about-image { aspect-ratio: 4/3; }
+    .about-image img { object-position: center 15%; }
     .about-stats { flex-direction: column; gap: 20px; align-items: center; text-align: center; }
     .about-stats > div { display: flex; flex-direction: column; align-items: center; flex: 0 0 auto; }
 }
