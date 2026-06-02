@@ -382,27 +382,27 @@ export const translations = {
 
     hero: {
       badge: '2026年暑期名额现正招募中',
-      h1: '每个人懂得的都远超自己能表达的。',
-      h1em: '我们帮你用英语清晰、自信地表达出来。',
+      h1: '你的认知，远超你的表达',
+      h1em: '我们帮你用英语清晰、自信地表达所思所想',
       sub: '高端英语表达',
       applyNow: '立即报名',
       seeHow: '了解学习方式',
     },
 
     trustBar: {
-      item1strong: '零承诺',
+      item1strong: '免费试听',
       item1: '第一节课即进行水平评估',
       item2strong: '表达优先',
       item2: '专注沟通，而非死记硬背',
       item3strong: '专注个人',
       item3: '即使小组课，也关注每一位学员',
-      item4strong: '10年以上',
+      item4strong: '10+ 教龄',
       item4: '每位教练均拥有十年以上经验',
     },
 
     method: {
       label: '学习方式',
-      title: '清晰流程，因人而异',
+      title: '路径清晰，因材施教',
       desc: '专注表达，而非单纯纠错。',
       cards: [
         {
@@ -425,7 +425,7 @@ export const translations = {
 
     approach: {
       label: '我们的不同之处',
-      title: '你懂得的远超你能表达的。我们帮你展现出来。',
+      title: '你懂得的远超你能表达的，我们帮你展现出来',
       desc: '我们不从单词表或操练开始，而是从你已有的知识入手，帮你用英语清楚地表达出来。',
       cards: [
         {
@@ -433,7 +433,7 @@ export const translations = {
           text: '他们有想法和见解，只是需要帮助把它们用英语表达出来。',
         },
         {
-          title: '说出来，再说得更好。',
+          title: '说出来，再说得更好',
           text: '我们首先关注完整句子，正确答案是其次。',
         },
         {
@@ -445,7 +445,7 @@ export const translations = {
 
     programs: {
       label: '课程项目',
-      title: '三种课程，一个承诺。',
+      title: '三种课程，一个承诺',
       desc: '每种课程均根据学员个人水平量身定制。选择最适合你的方式。',
       learnMore: '了解更多',
       items: [
@@ -545,7 +545,7 @@ export const translations = {
       stat3num: '7,000+',
       stat3label: '辅导小时',
       philosophyLabel: '我们的理念',
-      philosophyTitle: '不仅是一门语言。',
+      philosophyTitle: '不仅是一门语言，',
       philosophyTitleEm: '是终身工具。',
       philosophy: [
         { title: '陪伴成长', text: '英语不仅仅是需要记忆的科目——它是终身的工具。我们专注于建立每位学员的自信心、批判性思维和表达意愿。辅导超越语法，帮助学员感到放松、投入和被支持。' },
@@ -557,7 +557,7 @@ export const translations = {
 
     reviews: {
       label: '学员评价',
-      title: '来自亲历整个过程的真实学员。',
+      title: '来自亲历整个过程的真实学员',
       desc: '不是精心挑选的片段，而是那些全程投入的家庭的真实反馈。',
       tabs: { all: '全部', group: '小组课', oneon1: '一对一', ielts: '雅思' },
       videoTitle: '直接听学员分享',
@@ -627,7 +627,7 @@ export const translations = {
 
     faq: {
       label: '常见问题',
-      title: '关于整个过程的常见问题。',
+      title: '关于整个过程的常见问题',
       items: [
         { q: '这与其他英语辅导有什么不同？', a: '大多数辅导专注于考试备考、单词表和语法练习。Exprimio专注于个人用英语思考、表达和自然沟通的能力。我们以对话和真实话题为基础，语法和词汇在这个情境中得到处理，而非孤立练习。' },
         { q: '我的英语水平很基础，可以吗？', a: '完全可以。我们许多学员起初英语表达能力有限。该方法旨在从学员现有的基础出发，循序渐进地建立能力。我们以现有的理解为桥梁，以自然的节奏逐步过渡到用英语思考和表达。' },
