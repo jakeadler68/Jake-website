@@ -20,22 +20,22 @@ export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenConta
           <span className="nav-slogan">{t.footer.slogan}</span>
         </a>
         <ul className="nav-links">
-          <li>
-            <button className="nav-lang-toggle" onClick={onToggleLang}>
-              <span className={`lang-text ${lang === 'zh' ? 'active' : ''}`}>中</span>
-              <span className={`lang-thumb ${lang === 'zh' ? 'left' : 'right'}`}></span>
-              <span className={`lang-text ${lang === 'en' ? 'active' : ''}`}>EN</span>
-            </button>
-          </li>
           <li><a href="#how-it-works">{t.nav.method}</a></li>
           <li><a href="#programs">{t.nav.programs}</a></li>
           <li><a href="#about">{t.nav.about}</a></li>
           <li><a href="#reviews">{t.nav.results}</a></li>
           <li><button type="button" className="nav-cta" onClick={onOpenContact}>{t.nav.applyNow}</button></li>
         </ul>
-        <button className="mobile-toggle" onClick={onToggleMobile} aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <div className="nav-right">
+          <button className="nav-lang-toggle" onClick={onToggleLang}>
+            <span className={`lang-text ${lang === 'zh' ? 'active' : ''}`}>中</span>
+            <span className={`lang-thumb ${lang === 'zh' ? 'left' : 'right'}`}></span>
+            <span className={`lang-text ${lang === 'en' ? 'active' : ''}`}>EN</span>
+          </button>
+          <button className="mobile-toggle" onClick={onToggleMobile} aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>
   )
