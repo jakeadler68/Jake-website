@@ -12,7 +12,7 @@ export default function Footer({ onOpenContact }) {
       <div className="container">
         <div className="footer-cols">
           <div className="footer-col footer-col-brand">
-            <div className="footer-brand">Exprim<span>io</span></div>
+            <div className="footer-brand">Expr<span>imio</span></div>
             <p className="footer-slogan">{f.slogan}</p>
             <p className="footer-mission">{f.mission}</p>
           </div>
