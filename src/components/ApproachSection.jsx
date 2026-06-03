@@ -44,28 +44,27 @@ export default function ApproachSection() {
           </div>
         </div>
 
-        <div className="approach-materials-outer">
-          <div className="approach-materials-inner">
-            <div className="philosophy-accordion reveal">
-              <button
-                className={`philosophy-accordion-toggle${materialsOpen ? ' open' : ''}`}
-                onClick={() => setMaterialsOpen(o => !o)}
-                aria-expanded={materialsOpen}
-              >
-                <span className="section-label" style={{ letterSpacing: '0.12em' }}>{ab.materialsLabel}</span>
-                <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="6 9 12 15 18 9"/>
-                </svg>
-              </button>
-              <div className={`philosophy-dropdown${materialsOpen ? ' open' : ''}`}>
-                <div className="philosophy-dropdown-inner">
-                  <div className="materials-text">
-                    {materialsText.split('\n\n').map((para, i) => (
-                      <p key={i}>{para}</p>
-                    ))}
-                  </div>
-                </div>
-              </div>
+        <div className="approach-materials-toggle-row reveal">
+          <div />
+          <button
+            className={`philosophy-accordion-toggle${materialsOpen ? ' open' : ''}`}
+            onClick={() => setMaterialsOpen(o => !o)}
+            aria-expanded={materialsOpen}
+          >
+            <span className="section-label" style={{ letterSpacing: '0.12em' }}>{ab.materialsLabel}</span>
+            <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div />
+        </div>
+
+        <div className={`philosophy-dropdown${materialsOpen ? ' open' : ''}`}>
+          <div className="philosophy-dropdown-inner">
+            <div className="materials-text">
+              {materialsText.split('\n\n').map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function AboutSection() {
             <div className="about-image reveal">
               <img src="/img/about.jpg" alt="Jake - Lead Coach" loading="lazy" width="1200" height="800" />
             </div>
-            <div className="philosophy-accordion reveal about-philosophy">
+            <div className="about-philosophy reveal">
               <button
                 className={`philosophy-accordion-toggle${philosophyOpen ? ' open' : ''}`}
                 onClick={() => setPhilosophyOpen(o => !o)}
@@ -29,17 +29,11 @@ export default function AboutSection() {
                   <polyline points="6 9 12 15 18 9"/>
                 </svg>
               </button>
-              <div className={`philosophy-dropdown${philosophyOpen ? ' open' : ''}`}>
-                <div className="philosophy-dropdown-inner">
-                  <h3 className="philosophy-heading" style={{ fontSize: '1.6rem', textAlign: 'left', maxWidth: 'none' }}>{a.philosophyTitle} <em className="gold-text">{a.philosophyTitleEm}</em></h3>
-                  <div className="philosophy-grid" style={{ maxWidth: 'none', gridTemplateColumns: '1fr' }}>
-                    {a.philosophy.map((item, i) => (
-                      <div key={i} className="philosophy-item">
-                        <h4>{item.title}</h4>
-                        <p>{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
+              <div className={`about-philosophy-subheading${philosophyOpen ? ' open' : ''}`}>
+                <div className="about-philosophy-subheading-inner">
+                  <h3 className="about-philosophy-title">
+                    {a.philosophyTitle} <em className="gold-text">{a.philosophyTitleEm}</em>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -65,6 +59,19 @@ export default function AboutSection() {
                 <span className="about-stat-num">{a.stat3num}</span>
                 <span className="about-stat-label">{a.stat3label}</span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`philosophy-dropdown${philosophyOpen ? ' open' : ''}`}>
+          <div className="philosophy-dropdown-inner">
+            <div className="philosophy-grid">
+              {a.philosophy.map((item, i) => (
+                <div key={i} className="philosophy-item">
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

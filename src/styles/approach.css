@@ -38,26 +38,27 @@
     line-height: 1.8;
 }
 
-/* Materials accordion under center card */
-.approach-materials-outer {
+/* Materials toggle row — button centered under middle card, dropdown is full-width */
+.approach-materials-toggle-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 0;
 }
-.approach-materials-inner {
-    grid-column: 2;
-}
-.approach-materials-inner .philosophy-accordion {
-    margin-top: 16px;
+.approach-materials-toggle-row .philosophy-accordion-toggle {
+    border: none;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
 }
 
 /* About */
 
 @media (max-width: 1024px) {
     .approach-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
-    .approach-materials-outer { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-    .approach-materials-inner { grid-column: 1 / -1; }
+    .approach-materials-toggle-row { grid-template-columns: 1fr; }
+    .approach-materials-toggle-row > div { display: none; }
     .approach-grid .approach-card:last-child {
         grid-column: 1 / -1;
         justify-self: center;
@@ -78,6 +79,4 @@
     }
     .approach-grid { grid-template-columns: 1fr; gap: 20px; }
     .approach-card { padding: 32px 24px; }
-    .approach-materials-outer { grid-template-columns: 1fr; }
-    .approach-materials-inner { grid-column: 1; }
 }

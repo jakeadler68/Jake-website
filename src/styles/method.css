@@ -53,6 +53,9 @@
     padding: 20px 0;
     text-align: left;
 }
+.philosophy-accordion-toggle .section-label {
+    margin-bottom: 0;
+}
 .philosophy-accordion-toggle:hover .section-label {
     opacity: 0.7;
 }
@@ -120,7 +123,7 @@
 
 /* Materials accordion text */
 .materials-text {
-    max-width: 720px;
+    max-width: 860px;
     margin: 0 auto;
     padding-bottom: 16px;
 }
