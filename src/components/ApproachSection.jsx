@@ -1,11 +1,16 @@
+import { useState } from 'react'
 import useReveal from '../hooks/useReveal'
 import { useLanguage } from '../LanguageContext'
 import '../styles/approach.css'
+import '../styles/method.css'
 
 export default function ApproachSection() {
   useReveal()
+  const [materialsOpen, setMaterialsOpen] = useState(false)
   const { t } = useLanguage()
   const a = t.approach
+  const ab = t.about
+  const materialsText = t.faq.items[t.faq.items.length - 1].a
 
   return (
     <section className="approach-section" id="approach">
@@ -36,6 +41,32 @@ export default function ApproachSection() {
             </div>
             <h3>{a.cards[2].title}</h3>
             <p>{a.cards[2].text}</p>
+          </div>
+        </div>
+
+        <div className="approach-materials-outer">
+          <div className="approach-materials-inner">
+            <div className="philosophy-accordion reveal">
+              <button
+                className={`philosophy-accordion-toggle${materialsOpen ? ' open' : ''}`}
+                onClick={() => setMaterialsOpen(o => !o)}
+                aria-expanded={materialsOpen}
+              >
+                <span className="section-label" style={{ letterSpacing: '0.12em' }}>{ab.materialsLabel}</span>
+                <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div className={`philosophy-dropdown${materialsOpen ? ' open' : ''}`}>
+                <div className="philosophy-dropdown-inner">
+                  <div className="materials-text">
+                    {materialsText.split('\n\n').map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
