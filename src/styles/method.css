@@ -118,6 +118,22 @@
     color: var(--text-light, #3a3a4a);
 }
 
+/* Materials accordion text */
+.materials-text {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
+.materials-text p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+.materials-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Programs */
 
 @media (max-width: 1024px) {

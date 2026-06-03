@@ -173,6 +173,7 @@ export const translations = {
       stat3num: '7,000+',
       stat3label: 'Hours of Coaching',
       philosophyLabel: 'OUR PHILOSOPHY',
+      materialsLabel: 'MATERIALS USED',
       philosophyTitle: 'More than a language.',
       philosophyTitleEm: 'A tool for life.',
       philosophy: [
@@ -546,6 +547,7 @@ export const translations = {
       stat3num: '7,000+',
       stat3label: '辅导小时',
       philosophyLabel: '我们的理念',
+      materialsLabel: '所用教学材料',
       philosophyTitle: '不仅是一门语言，',
       philosophyTitleEm: '是终身工具。',
       philosophy: [
