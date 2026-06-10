@@ -36,11 +36,11 @@ export default function AboutSection() {
               aria-expanded={philosophyOpen}
             >
               <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
-              <span className="about-btn-dot"></span>
+              <span className="about-btn-plus">+</span>
             </button>
             <a href="#coaches" className="about-action-btn">
               <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.coachesBtn}</span>
-              <span className="about-btn-dot"></span>
+              <span className="about-btn-plus">+</span>
             </a>
           </div>
 

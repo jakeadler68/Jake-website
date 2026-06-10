@@ -56,16 +56,17 @@
     text-decoration: none;
 }
 .about-action-btn:hover .section-label { opacity: 0.7; }
-.about-btn-dot {
-    width: 11px;
-    height: 11px;
-    border: 1.5px solid var(--gold);
-    border-radius: 50%;
+.about-btn-plus {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1;
     flex-shrink: 0;
-    transition: background 0.25s;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
-.about-action-btn.open .about-btn-dot {
-    background: var(--gold);
+.about-action-btn.open .about-btn-plus {
+    transform: rotate(45deg);
 }
 
 /* Content + stats */
