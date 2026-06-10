@@ -357,6 +357,9 @@
 .contact-msg-form textarea {
     background: var(--cream);
 }
+.contact-field-error input {
+    border-color: #c0392b;
+}
 
 /* Responsive */
 

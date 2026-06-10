@@ -15,7 +15,10 @@ export default function ContactMessageForm({ isOpen, onClose }) {
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(null)
+  const [contactError, setContactError] = useState(false)
   const formRef = useRef(null)
+  const emailRef = useRef(null)
+  const phoneRef = useRef(null)
 
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -31,6 +34,11 @@ export default function ContactMessageForm({ isOpen, onClose }) {
 
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault()
+    if (!emailRef.current?.value && !phoneRef.current?.value) {
+      setContactError(true)
+      return
+    }
+    setContactError(false)
     setSending(true)
     setError(null)
     try {
@@ -57,20 +65,26 @@ export default function ContactMessageForm({ isOpen, onClose }) {
           <p className="section-desc">{cm.desc}</p>
         </div>
         <form ref={formRef} className="enquiry-form contact-msg-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="form-group">
-              <label>{cm.labels.name}</label>
-              <input type="text" name="name" placeholder={cm.placeholders.name} required />
-            </div>
-            <div className="form-group">
-              <label>{cm.labels.email}</label>
-              <input type="email" name="email" placeholder={cm.placeholders.email} required />
-            </div>
-          </div>
           <div className="form-group">
-            <label>{cm.labels.phone} <span className="field-optional">{cm.optional}</span></label>
-            <input type="tel" name="phone" placeholder={cm.placeholders.phone} />
+            <label>{cm.labels.name}</label>
+            <input type="text" name="name" placeholder={cm.placeholders.name} required />
           </div>
+          <div className={`form-group${contactError ? ' contact-field-error' : ''}`}>
+            <label>
+              {cm.labels.email}
+              <span className="field-optional"> {cm.contactHint}</span>
+            </label>
+            <input ref={emailRef} type="email" name="email" placeholder={cm.placeholders.email} onChange={() => setContactError(false)} />
+          </div>
+          <div className={`form-group${contactError ? ' contact-field-error' : ''}`}>
+            <label>{cm.labels.phone}</label>
+            <input ref={phoneRef} type="text" name="phone" placeholder={cm.placeholders.phone} onChange={() => setContactError(false)} />
+          </div>
+          {contactError && (
+            <p style={{ color: '#c0392b', fontSize: '0.85rem', marginTop: '-12px', marginBottom: '16px' }}>
+              {cm.contactRequired}
+            </p>
+          )}
           <div className="form-group">
             <label>{cm.labels.message}</label>
             <textarea name="message" placeholder={cm.placeholders.message} rows="5" required></textarea>
