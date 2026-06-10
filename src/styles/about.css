@@ -1,22 +1,23 @@
 /* About */
 .about-section { background: var(--white) }
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: stretch;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "image content"
+        "buttons stats";
+    column-gap: 56px;
+    row-gap: 0;
     margin-top: 40px;
+    align-items: start;
 }
 
-/* Left column: image + buttons stacked */
-.about-left {
-    display: flex;
-    flex-direction: column;
-}
 .about-image {
+    grid-area: image;
     width: 100%;
-    flex: 1;
-    min-height: 300px;
+    aspect-ratio: 4/5;
     background: var(--dark);
     position: relative;
     overflow: hidden;
@@ -30,17 +31,19 @@
 .about-image::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     border: 1px solid var(--gold);
     margin: 20px;
     pointer-events: none;
     opacity: 0.3;
 }
 
-/* Buttons below image — no borders */
+/* Buttons below image */
+.about-buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+}
 .about-action-btn {
     display: flex;
     align-items: center;
@@ -51,19 +54,23 @@
     cursor: pointer;
     padding: 14px 0;
     text-decoration: none;
-    margin-top: 2px;
 }
 .about-action-btn:hover .section-label { opacity: 0.7; }
-/* Strip borders from philosophy toggle when used as about-action-btn */
-.about-left .philosophy-accordion-toggle {
-    border: none;
-    padding: 14px 0;
+.about-btn-dot {
+    width: 11px;
+    height: 11px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: background 0.25s;
+}
+.about-action-btn.open .about-btn-dot {
+    background: var(--gold);
 }
 
-/* Right column: content + stats pushed to bottom */
+/* Content + stats */
 .about-content {
-    display: flex;
-    flex-direction: column;
+    grid-area: content;
 }
 .about-content h3 {
     font-size: 2rem;
@@ -77,13 +84,14 @@
     margin-bottom: 18px;
     line-height: 1.8;
 }
+
 .about-stats {
+    grid-area: stats;
     display: flex;
     gap: 24px;
-    margin-top: auto;
-    padding-top: 32px;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 14px;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 .about-stats > div { min-width: 0; flex: 1 1 140px; }
 .about-stat-num {
@@ -101,16 +109,22 @@
     white-space: nowrap;
 }
 
-/* Coaches Page */
-
 @media (max-width: 1024px) {
-    .about-grid { gap: 48px; }
+    .about-grid { column-gap: 48px; }
 }
 
 @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; align-items: start; }
-    .about-image { flex: none; aspect-ratio: 4/3; min-height: unset; }
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "image"
+            "content"
+            "buttons"
+            "stats";
+    }
+    .about-image { aspect-ratio: 4/3; }
     .about-image img { object-position: center 15%; }
-    .about-stats { flex-direction: column; gap: 20px; align-items: center; text-align: center; margin-top: 32px; }
+    .about-stats { padding-top: 24px; flex-direction: column; gap: 20px; align-items: center; text-align: center; }
     .about-stats > div { display: flex; flex-direction: column; align-items: center; flex: 0 0 auto; }
 }
