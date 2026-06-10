@@ -16,6 +16,7 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import CoachesPage from './components/CoachesPage'
 import PolicyPage from './components/PolicyPage'
+import ContactMessageForm from './components/ContactMessageForm'
 import { LanguageContext } from './LanguageContext'
 import { translations } from './translations'
 
@@ -33,6 +34,7 @@ export default function App() {
   const [programModal, setProgramModal] = useState(null)
   const [videoModal, setVideoModal] = useState(null)
   const [contactOpen, setContactOpen] = useState(false)
+  const [contactMessageOpen, setContactMessageOpen] = useState(false)
   const [lang, setLang] = useState('en')
   const [route, setRoute] = useState(getRoute)
   const homeScrollRef = useRef(0)
@@ -97,6 +99,8 @@ export default function App() {
   const closeVideo = useCallback(() => setVideoModal(null), [])
   const openContact = useCallback(() => setContactOpen(true), [])
   const closeContact = useCallback(() => setContactOpen(false), [])
+  const openContactMessage = useCallback(() => setContactMessageOpen(true), [])
+  const closeContactMessage = useCallback(() => setContactMessageOpen(false), [])
 
   return (
     <LanguageContext.Provider value={{ lang, t: translations[lang] }}>
@@ -119,8 +123,9 @@ export default function App() {
       {route === 'privacy' && <PolicyPage type="privacy" />}
       {route === 'terms' && <PolicyPage type="terms" />}
       {route === 'refund' && <PolicyPage type="refund" />}
-      <Footer onOpenContact={openContact} />
+      <Footer onOpenContact={openContact} onOpenContactMessage={openContactMessage} />
       <ContactForm isOpen={contactOpen} onClose={closeContact} />
+      <ContactMessageForm isOpen={contactMessageOpen} onClose={closeContactMessage} />
     </LanguageContext.Provider>
   )
 }

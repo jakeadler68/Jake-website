@@ -342,6 +342,21 @@
     border: none;
     max-width: none;
 }
+.contact-msg-content {
+    max-width: 580px;
+}
+.contact-msg-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.contact-msg-header .section-desc {
+    max-width: 440px;
+    margin: 0 auto;
+}
+.contact-msg-form input,
+.contact-msg-form textarea {
+    background: var(--cream);
+}
 
 /* Responsive */
 

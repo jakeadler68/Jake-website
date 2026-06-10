@@ -2,7 +2,7 @@ import useReveal from '../hooks/useReveal'
 import { useLanguage } from '../LanguageContext'
 import '../styles/footer.css'
 
-export default function Footer({ onOpenContact }) {
+export default function Footer({ onOpenContact, onOpenContactMessage }) {
   useReveal()
   const { t } = useLanguage()
   const f = t.footer
@@ -26,7 +26,7 @@ export default function Footer({ onOpenContact }) {
               <li><a href="#about">{f.links[1]}</a></li>
               <li><a href="#how-it-works">{f.links[2]}</a></li>
               <li><button type="button" className="footer-link-btn" onClick={onOpenContact}>{f.links[3]}</button></li>
-              <li><button type="button" className="footer-link-btn" onClick={onOpenContact}>{f.links[4]}</button></li>
+              <li><button type="button" className="footer-link-btn" onClick={onOpenContactMessage}>{f.links[4]}</button></li>
             </ul>
           </div>
 
@@ -72,7 +72,7 @@ export default function Footer({ onOpenContact }) {
             <span className="footer-divider">|</span>
             <a href="#refund">{f.refundPolicy}</a>
             <span className="footer-divider">|</span>
-            <button type="button" className="footer-link-btn footer-bottom-btn" onClick={onOpenContact}>Contact</button>
+            <button type="button" className="footer-link-btn footer-bottom-btn" onClick={onOpenContactMessage}>{f.contact}</button>
           </span>
         </div>
       </div>
