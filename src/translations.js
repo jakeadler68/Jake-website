@@ -289,6 +289,7 @@ export const translations = {
       privacyPolicy: 'Privacy Policy',
       termsOfService: 'Terms of Service',
       refundPolicy: 'Refund & Cancellation',
+      contact: 'Contact',
     },
 
     coaches: {
@@ -307,6 +308,154 @@ export const translations = {
       comingSoonText: 'We are carefully selecting coaches who share the Exprimio standard. Every new coach trains in our expression-first method before joining the team.',
       ctaTitle: 'Ready to start your journey?',
       ctaBtn: 'Apply Now',
+    },
+
+    policies: {
+      back: '← Back to Home',
+      label: 'Legal',
+      updated: 'Last updated: June 2026',
+      onlineNote: 'Exprimio provides communication coaching and consulting services through online platforms. Services are delivered online only.',
+      contactHeading: 'Contact',
+      contactCompany: 'Golden Eagle Consulting Company Limited · Ho Chi Minh City, Vietnam',
+
+      privacy: {
+        title: 'Privacy Policy',
+        s: [
+          {
+            h: 'Who We Are',
+            p: ['Exprimio is a communication coaching and consulting service operated by Golden Eagle Consulting Company Limited (GEC CO., LTD), registered in Ho Chi Minh City, Vietnam (ERC: 0319547171). Our website is exprimio.com.'],
+          },
+          {
+            h: 'Information We Collect',
+            p: ['When you interact with Exprimio, we may collect the following:'],
+            items: [
+              'Name and contact information (email address, messaging handles)',
+              'Communication preferences and coaching goals',
+              'Session notes and progress records, used solely to support your coaching',
+              'Payment information — processed securely by third-party payment processors; we do not store card details',
+            ],
+          },
+          {
+            h: 'How We Use Your Information',
+            p: ['We use your information to:'],
+            items: [
+              'Deliver and personalise your coaching sessions',
+              'Communicate with you about scheduling, updates, and support',
+              'Process payments and manage your account',
+              'Improve the quality of our services',
+            ],
+            p2: ['We do not sell, rent, or share your personal information with third parties for marketing purposes.'],
+          },
+          {
+            h: 'Third-Party Services',
+            p: ['We use a small number of trusted third-party platforms to operate our services, including ClassIn for session delivery and payment processors for billing. These providers operate under their own privacy policies and are required to handle your data securely.'],
+          },
+          {
+            h: 'Data Retention',
+            p: ['We retain your information for as long as your coaching relationship is active, or as required for legitimate business and legal purposes. You may request deletion of your data at any time by contacting us.'],
+          },
+          {
+            h: 'Your Rights',
+            p: ['You have the right to access, correct, or request deletion of your personal information. To exercise any of these rights, please contact us at the address below.'],
+          },
+        ],
+        contactLine: 'For privacy-related questions or requests:',
+      },
+
+      terms: {
+        title: 'Terms of Service',
+        note: 'By engaging Exprimio\'s services, you agree to these terms. Services are delivered online only through agreed digital platforms.',
+        s: [
+          {
+            h: 'About Our Services',
+            p: ['Exprimio provides online communication coaching and consulting services operated by Golden Eagle Consulting Company Limited (GEC CO., LTD), Ho Chi Minh City, Vietnam. All sessions are conducted through online platforms — Exprimio does not operate any physical location or in-person program.'],
+          },
+          {
+            h: 'Eligibility',
+            p: ['Our services are available to individuals who have completed an initial consultation and agreed to a program or session package. By using our services, you confirm that the information you provide is accurate and complete.'],
+          },
+          {
+            h: 'Payments',
+            p: ['Packages are generally paid in advance unless otherwise agreed in writing. Payment confirms your place in a scheduled program. All pricing is communicated during the consultation process before any commitment is made.'],
+          },
+          {
+            h: 'Cancellations & Refunds',
+            p: ['Our cancellation and refund terms are detailed in the Refund & Cancellation Policy. By booking sessions or packages, you agree to those terms.'],
+            refundLink: true,
+          },
+          {
+            h: 'Intellectual Property',
+            p: ['All coaching materials, frameworks, and content provided by Exprimio are for your personal use only and may not be reproduced, shared, or distributed without written permission.'],
+          },
+          {
+            h: 'Conduct',
+            p: ['We ask that all clients engage respectfully during sessions. Exprimio reserves the right to discontinue services in cases of abusive, disrespectful, or inappropriate behaviour, without obligation to issue a refund for unused sessions.'],
+          },
+          {
+            h: 'Limitation of Liability',
+            p: ['Exprimio provides coaching and consulting services in good faith. Results vary by individual. We cannot guarantee specific outcomes and are not liable for indirect or consequential losses arising from use of our services.'],
+          },
+          {
+            h: 'Changes to These Terms',
+            p: ['We may update these terms from time to time. Continued use of our services following notice of changes constitutes acceptance of the updated terms.'],
+          },
+        ],
+        contactLine: 'Questions about these terms:',
+      },
+
+      refund: {
+        title: 'Refund & Cancellation Policy',
+        note: 'We aim to be fair, clear, and consistent. This policy is designed to protect both clients and the integrity of the coaching schedule.',
+        s: [
+          {
+            h: 'Initial Consultation',
+            p: ['The initial session may be used to assess your communication goals, current level, scheduling fit, and recommended coaching path. This session helps ensure the program is the right match before any package commitment is made.'],
+          },
+          {
+            h: 'Package Payments',
+            p: ['Packages are generally paid in advance unless otherwise agreed. Payment confirms your place in a scheduled program and reserves recurring availability with your coach.'],
+          },
+          {
+            h: 'Once a Package Begins',
+            p: ['Once a package has begun, payments are generally non-refundable. This reflects the fact that recurring appointment availability, session planning, and coach preparation are reserved on your behalf in advance.'],
+          },
+          {
+            h: 'Unused Sessions',
+            p: ['Unused sessions may be rescheduled, transferred, credited, or otherwise handled on a case-by-case basis at Exprimio\'s discretion, depending on the circumstances involved.'],
+          },
+          {
+            h: 'Scheduling & Cancellations',
+            items: [
+              'Sessions cancelled more than 24 hours in advance may be rescheduled based on availability.',
+              'Sessions cancelled between 12 and 24 hours before the scheduled time may count as 50% of the session.',
+              'Sessions cancelled less than 12 hours before the scheduled time may count as completed.',
+              'Late arrivals do not extend the originally scheduled end time.',
+            ],
+          },
+          {
+            h: 'Package Usage & Inactive Scheduling',
+            p: ['Exprimio reserves recurring schedule availability based on each client\'s appointment frequency. Extended inactivity may result in gradual session expiry:'],
+            items: [
+              'For clients with 1–2 sessions per week: unused sessions may begin expiring after 30 consecutive days without scheduled activity.',
+              'For clients with 3 or more sessions per week: unused sessions may begin expiring after 60 consecutive days without scheduled activity.',
+            ],
+            p2: [
+              'Once the inactivity threshold is reached, unused sessions may begin expiring gradually at the client\'s previous recurring appointment frequency — for example, a client previously attending two sessions per week may have two sessions per week deducted until the package is exhausted or activity resumes.',
+              'Exceptions may be discussed in advance for travel, examinations, medical situations, or other reasonable circumstances.',
+            ],
+          },
+          {
+            h: 'Exceptional Situations',
+            p: ['Refunds or credits may still be considered in exceptional situations, including:'],
+            items: [
+              'Duplicate payment or payment processing error',
+              'Major technical issue caused by Exprimio',
+              'Other reasonable circumstances assessed on a case-by-case basis',
+            ],
+          },
+        ],
+        contactLine: 'For questions about scheduling, billing, cancellations, or this policy:',
+      },
     },
 
     contactForm: {
@@ -671,6 +820,7 @@ export const translations = {
       privacyPolicy: '隐私政策',
       termsOfService: '服务条款',
       refundPolicy: '退款与取消',
+      contact: '联系我们',
     },
 
     coaches: {
@@ -689,6 +839,154 @@ export const translations = {
       comingSoonText: '我们正在精心挑选认同Exprimio标准的教练。每位新教练在加入团队前都会接受我们的表达优先方法培训。',
       ctaTitle: '准备好开始你的旅程了吗？',
       ctaBtn: '立即报名',
+    },
+
+    policies: {
+      back: '← 返回首页',
+      label: '法律条款',
+      updated: '最后更新：2026年6月',
+      onlineNote: 'Exprimio通过线上平台提供沟通辅导与咨询服务。所有服务均以线上方式提供。',
+      contactHeading: '联系我们',
+      contactCompany: 'Golden Eagle Consulting Company Limited · 越南胡志明市',
+
+      privacy: {
+        title: '隐私政策',
+        s: [
+          {
+            h: '关于我们',
+            p: ['Exprimio是一项沟通辅导与咨询服务，由Golden Eagle Consulting Company Limited（GEC CO., LTD）运营，注册于越南胡志明市（营业执照号：0319547171）。我们的网站为exprimio.com。'],
+          },
+          {
+            h: '我们收集的信息',
+            p: ['当您与Exprimio互动时，我们可能收集以下信息：'],
+            items: [
+              '姓名及联系信息（电子邮件地址、通讯账号）',
+              '沟通偏好及辅导目标',
+              '课程笔记及进度记录，仅用于支持您的辅导',
+              '付款信息——由第三方支付处理机构安全处理；我们不存储您的银行卡信息',
+            ],
+          },
+          {
+            h: '我们如何使用您的信息',
+            p: ['我们将您的信息用于以下目的：'],
+            items: [
+              '提供并个性化您的辅导课程',
+              '就排课、更新及支持事宜与您沟通',
+              '处理付款及管理您的账户',
+              '提升我们服务的质量',
+            ],
+            p2: ['我们不会出售、出租或将您的个人信息共享给第三方用于营销目的。'],
+          },
+          {
+            h: '第三方服务',
+            p: ['我们使用少量受信任的第三方平台来运营服务，包括用于课程交付的ClassIn和用于计费的支付处理机构。这些提供商依据各自的隐私政策运营，并须安全处理您的数据。'],
+          },
+          {
+            h: '数据保留',
+            p: ['在您的辅导关系持续期间，或根据合理的业务和法律要求，我们将保留您的信息。您可随时联系我们申请删除您的数据。'],
+          },
+          {
+            h: '您的权利',
+            p: ['您有权访问、更正或申请删除您的个人信息。如需行使上述任何权利，请通过以下地址联系我们。'],
+          },
+        ],
+        contactLine: '如有隐私相关问题或申请：',
+      },
+
+      terms: {
+        title: '服务条款',
+        note: '使用Exprimio服务即表示您同意以下条款。所有服务均通过约定的数字平台以线上方式提供。',
+        s: [
+          {
+            h: '关于我们的服务',
+            p: ['Exprimio提供线上沟通辅导与咨询服务，由Golden Eagle Consulting Company Limited（GEC CO., LTD）运营，注册于越南胡志明市。所有课程均通过线上平台进行——Exprimio不设任何实体场所或线下项目。'],
+          },
+          {
+            h: '适用条件',
+            p: ['我们的服务面向已完成初次咨询并同意课程或套餐方案的个人。使用我们的服务即表示您确认所提供的信息真实完整。'],
+          },
+          {
+            h: '付款',
+            p: ['除非另有书面约定，套餐通常须预付。付款确认您在预定课程中的席位。所有定价均在咨询过程中、做出任何承诺前告知。'],
+          },
+          {
+            h: '取消与退款',
+            p: ['我们的取消和退款条款详见退款与取消政策。预订课程或套餐即表示您同意该条款。'],
+            refundLink: true,
+          },
+          {
+            h: '知识产权',
+            p: ['Exprimio提供的所有辅导材料、框架和内容仅供您个人使用，未经书面许可不得复制、分享或传播。'],
+          },
+          {
+            h: '行为规范',
+            p: ['我们要求所有客户在课程期间保持尊重。Exprimio保留在客户出现辱骂、无礼或不当行为时终止服务的权利，且无义务退还未使用课程的费用。'],
+          },
+          {
+            h: '责任限制',
+            p: ['Exprimio以诚信方式提供辅导和咨询服务。个人成效因人而异。我们无法保证特定结果，对因使用我们服务而产生的间接或后果性损失不承担责任。'],
+          },
+          {
+            h: '条款变更',
+            p: ['我们可能会不时更新这些条款。在收到变更通知后继续使用我们的服务即表示接受更新后的条款。'],
+          },
+        ],
+        contactLine: '如有关于条款的问题：',
+      },
+
+      refund: {
+        title: '退款与取消政策',
+        note: '我们致力于做到公平、清晰、一致。本政策旨在保护客户权益并维护辅导日程的严肃性。',
+        s: [
+          {
+            h: '初次咨询',
+            p: ['初次课程可用于评估您的沟通目标、当前水平、排课适配性及推荐的辅导路径。该课程有助于在做出任何套餐承诺前确认课程是否合适。'],
+          },
+          {
+            h: '套餐付款',
+            p: ['除非另有约定，套餐通常须预付。付款确认您在预定课程中的席位，并为您的教练预留固定时段。'],
+          },
+          {
+            h: '套餐开始后',
+            p: ['套餐一旦开始，付款通常不予退还。这反映了固定课时、课程规划和教练准备均已提前为您预留的实际情况。'],
+          },
+          {
+            h: '未使用课时',
+            p: ['未使用的课时可根据具体情况，由Exprimio酌情处理，包括重新排课、转让、抵扣等方式。'],
+          },
+          {
+            h: '排课与取消',
+            items: [
+              '提前24小时以上取消的课程，可根据空档情况重新安排。',
+              '课前12至24小时取消的课程，可能计为该课程时长的50%。',
+              '课前12小时内取消的课程，可能计为已完成。',
+              '迟到不延长原定课程的结束时间。',
+            ],
+          },
+          {
+            h: '套餐使用与停课期限',
+            p: ['Exprimio根据每位客户的预约频率预留固定时段。长期无课可能导致课时逐步失效：'],
+            items: [
+              '每周上课1–2次的客户：连续30天无排课后，未使用课时可能开始失效。',
+              '每周上课3次及以上的客户：连续60天无排课后，未使用课时可能开始失效。',
+            ],
+            p2: [
+              '超过停课期限后，未使用课时可能按客户原有预约频率逐步递减——例如，原每周上课两次的客户，可能每周递减两课时，直至套餐用尽或恢复上课。',
+              '因出行、考试、医疗情况或其他合理情况，可提前与我们协商例外处理。',
+            ],
+          },
+          {
+            h: '特殊情况',
+            p: ['在以下特殊情况下，仍可申请退款或抵扣：'],
+            items: [
+              '重复付款或支付处理错误',
+              'Exprimio方面导致的重大技术问题',
+              '其他经逐案评估后认定合理的情况',
+            ],
+          },
+        ],
+        contactLine: '如有关于排课、账单、取消或本政策的问题：',
+      },
     },
 
     contactForm: {
