@@ -20,11 +20,11 @@ export default function AboutSection() {
           <div className="about-content">
             <span className="section-label reveal">{a.label}</span>
             <h3 className="reveal reveal-delay-1">{a.title} <em className="gold-text">{a.titleEm}</em></h3>
-            <p className="reveal reveal-delay-2">{a.p1}</p>
-            <p className="reveal reveal-delay-3">{a.p2}</p>
-            <p className="reveal reveal-delay-4">{a.p3}</p>
-            <p className="reveal reveal-delay-4">{a.p4}</p>
-            <p className="reveal reveal-delay-4">{a.p5}</p>
+            {a.p1 && <p className="reveal reveal-delay-2">{a.p1}</p>}
+            {a.p2 && <p className="reveal reveal-delay-3">{a.p2}</p>}
+            {a.p3 && <p className="reveal reveal-delay-4">{a.p3}</p>}
+            {a.p4 && <p className="reveal reveal-delay-4">{a.p4}</p>}
+            {a.p5 && <p className="reveal reveal-delay-4">{a.p5}</p>}
             <div className="about-stats reveal">
               <div>
                 <span className="about-stat-num">{a.stat1num}</span>
