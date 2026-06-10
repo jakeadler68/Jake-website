@@ -14,9 +14,29 @@ export default function AboutSection() {
     <section className="about-section" id="about">
       <div className="container">
         <div className="about-grid">
-          <div className="about-image reveal">
-            <img src="/img/about.jpg" alt="Jake - Lead Coach" loading="lazy" width="1200" height="800" />
+
+          <div className="about-left reveal">
+            <div className="about-image">
+              <img src="/img/about.jpg" alt="Jake - Lead Coach" loading="lazy" width="1200" height="800" />
+            </div>
+            <button
+              className={`about-action-btn philosophy-accordion-toggle${philosophyOpen ? ' open' : ''}`}
+              onClick={() => setPhilosophyOpen(o => !o)}
+              aria-expanded={philosophyOpen}
+            >
+              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
+              <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <a href="#coaches" className="about-action-btn about-coaches-btn">
+              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.coachesBtn}</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--gold)', flexShrink: 0 }}>
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
           </div>
+
           <div className="about-content">
             <span className="section-label reveal">{a.label}</span>
             <h3 className="reveal reveal-delay-1">{a.title} <em className="gold-text">{a.titleEm}</em></h3>
@@ -40,29 +60,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="about-btn-row reveal">
-          <div>
-            <button
-              className={`philosophy-accordion-toggle${philosophyOpen ? ' open' : ''}`}
-              onClick={() => setPhilosophyOpen(o => !o)}
-              aria-expanded={philosophyOpen}
-            >
-              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
-              <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="6 9 12 15 18 9"/>
-              </svg>
-            </button>
-          </div>
-          <div>
-            <a href="#coaches" className="about-coaches-btn">
-              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.coachesBtn}</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--gold)', flexShrink: 0 }}>
-                <polyline points="9 18 15 12 9 6"/>
-              </svg>
-            </a>
-          </div>
         </div>
 
         <div className={`philosophy-dropdown${philosophyOpen ? ' open' : ''}`}>
