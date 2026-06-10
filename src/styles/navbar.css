@@ -120,6 +120,18 @@ nav.scrolled {
     color: var(--dark) !important;
 }
 
+nav.light {
+    background: var(--cream);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.07);
+}
+nav.light .nav-logo { color: var(--dark); }
+nav.light .nav-links a { color: rgba(19,18,31,0.6); }
+nav.light .nav-links a:hover { color: var(--gold); }
+nav.light .nav-lang-toggle { background: rgba(19,18,31,0.05); }
+nav.light .nav-lang-toggle .lang-text { color: rgba(19,18,31,0.45); }
+nav.light .nav-lang-toggle .lang-text.active { color: var(--dark); }
+nav.light .mobile-toggle span { background: var(--dark); }
+
 .mobile-toggle {
     display: none;
     flex-direction: column;

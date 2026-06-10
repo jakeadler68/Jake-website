@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useLanguage } from '../LanguageContext'
 import '../styles/navbar.css'
 
-export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenContact, forceDark }) {
+export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenContact, forceDark, forceLight }) {
   const { t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
 
@@ -13,7 +13,7 @@ export default function Navbar({ onToggleMobile, onToggleLang, lang, onOpenConta
   }, [])
 
   return (
-    <nav className={scrolled || forceDark ? 'scrolled' : ''}>
+    <nav className={forceLight ? 'light' : scrolled || forceDark ? 'scrolled' : ''}>
       <div className="nav-inner">
         <a href="#" className="nav-brand">
           <span className="nav-logo">Expr<span>imio</span></span>
