@@ -535,13 +535,13 @@ export const translations = {
       labels: {
         name: 'Your Name',
         email: 'Email Address',
-        phone: 'Phone Number',
+        phone: 'Phone / WeChat',
         message: 'Message',
       },
       placeholders: {
         name: 'Full name',
         email: 'your@email.com',
-        phone: '+1 234 567 8900',
+        phone: 'Phone number or WeChat ID',
         message: 'How can we help you?',
       },
       submit: 'SEND MESSAGE',
@@ -1089,13 +1089,13 @@ export const translations = {
       labels: {
         name: '您的姓名',
         email: '电子邮箱',
-        phone: '电话号码',
+        phone: '电话 / 微信',
         message: '留言内容',
       },
       placeholders: {
         name: '全名',
         email: 'your@email.com',
-        phone: '+86 123 456 7890',
+        phone: '电话号码或微信号',
         message: '我们能为您做些什么？',
       },
       submit: '发送消息',
