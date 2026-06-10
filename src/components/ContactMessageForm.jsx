@@ -6,8 +6,7 @@ import '../styles/contact-form.css'
 
 const EMAILJS_PUBLIC_KEY = '0uGaLF7Jx1YMCOj4n'
 const EMAILJS_SERVICE_ID = 'service_b56f55o'
-// Create an EmailJS template with variables: {{name}}, {{email}}, {{phone}}, {{message}}
-const CONTACT_TEMPLATE_ID = 'template_contact'
+const CONTACT_TEMPLATE_ID = 'template_poty0am'
 
 export default function ContactMessageForm({ isOpen, onClose }) {
   const { t } = useLanguage()
