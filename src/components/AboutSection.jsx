@@ -42,28 +42,39 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="philosophy-accordion reveal">
-          <button
-            className={`philosophy-accordion-toggle${philosophyOpen ? ' open' : ''}`}
-            onClick={() => setPhilosophyOpen(o => !o)}
-            aria-expanded={philosophyOpen}
-          >
-            <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
-            <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div className={`philosophy-dropdown${philosophyOpen ? ' open' : ''}`}>
-            <div className="philosophy-dropdown-inner">
-              <h3 className="philosophy-heading">{a.philosophyTitle} <em className="gold-text">{a.philosophyTitleEm}</em></h3>
-              <div className="philosophy-grid">
-                {a.philosophy.map((item, i) => (
-                  <div key={i} className="philosophy-item">
-                    <h4>{item.title}</h4>
-                    <p>{item.text}</p>
-                  </div>
-                ))}
-              </div>
+        <div className="about-btn-row reveal">
+          <div>
+            <button
+              className={`philosophy-accordion-toggle${philosophyOpen ? ' open' : ''}`}
+              onClick={() => setPhilosophyOpen(o => !o)}
+              aria-expanded={philosophyOpen}
+            >
+              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
+              <svg className="philosophy-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <a href="#coaches" className="about-coaches-btn">
+              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.coachesBtn}</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--gold)', flexShrink: 0 }}>
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div className={`philosophy-dropdown${philosophyOpen ? ' open' : ''}`}>
+          <div className="philosophy-dropdown-inner">
+            <h3 className="philosophy-heading">{a.philosophyTitle} <em className="gold-text">{a.philosophyTitleEm}</em></h3>
+            <div className="philosophy-grid">
+              {a.philosophy.map((item, i) => (
+                <div key={i} className="philosophy-item">
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -29,12 +29,9 @@ export default function CoachesPage({ onOpenContact }) {
               <div className="coach-card-body">
                 <h2 className="coach-name">{c.jakeName}</h2>
                 <p className="coach-role">{c.jakeRole}</p>
-                <ul className="coach-credentials">
-                  {c.jakeCredentials.map((cred, i) => (
-                    <li key={i}>{cred}</li>
-                  ))}
-                </ul>
-                <p className="coach-philosophy">{c.jakeQuote}</p>
+                {c.jakeBio.map((para, i) => (
+                  <p key={i} className="coach-bio-para">{para}</p>
+                ))}
               </div>
             </article>
 

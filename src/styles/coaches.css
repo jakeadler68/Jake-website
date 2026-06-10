@@ -126,6 +126,13 @@
     height: 1px;
     background: var(--gold);
 }
+.coach-bio-para {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+.coach-bio-para:last-child { margin-bottom: 0; }
 .coach-philosophy {
     font-style: italic;
     color: var(--text-light, #3a3a4a);
