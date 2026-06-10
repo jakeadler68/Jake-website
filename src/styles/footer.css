@@ -26,10 +26,18 @@ footer {
     color: var(--gold);
     margin-bottom: 12px;
 }
-.footer-mission {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.6;
+.footer-category {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.footer-online-note {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.5;
+    font-style: italic;
 }
 .footer-col-title {
     color: var(--white);
@@ -56,9 +64,20 @@ footer {
 }
 .footer-col-links a:hover,
 .footer-col-links .footer-link-btn:hover { color: var(--gold); }
-.footer-wechat { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
-.footer-wechat span { color: var(--white); font-weight: 500; }
-.footer-hours { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.footer-legal-block {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-legal-text {
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.25);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+.footer-legal-text strong {
+    font-weight: 500;
+    color: rgba(255,255,255,0.35);
+}
 .footer-bottom {
     padding-top: 32px;
     border-top: 1px solid rgba(255,255,255,0.04);
@@ -73,12 +92,20 @@ footer {
     color: rgba(255,255,255,0.25);
 }
 .footer-bottom-links { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.footer-bottom-links a {
+.footer-bottom-links a,
+.footer-bottom-btn {
     color: rgba(255,255,255,0.4);
     text-decoration: none;
     transition: color 0.3s;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 0.72rem;
+    cursor: pointer;
 }
-.footer-bottom-links a:hover { color: var(--gold); }
+.footer-bottom-links a:hover,
+.footer-bottom-btn:hover { color: var(--gold); }
 .footer-divider { color: rgba(255,255,255,0.2); }
 
 /* Contact Modal */

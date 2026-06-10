@@ -15,10 +15,18 @@ import ContactForm from './components/ContactForm'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import CoachesPage from './components/CoachesPage'
+import PolicyPage from './components/PolicyPage'
 import { LanguageContext } from './LanguageContext'
 import { translations } from './translations'
 
-const getRoute = () => (window.location.hash === '#coaches' ? 'coaches' : 'home')
+const getRoute = () => {
+  const h = window.location.hash
+  if (h === '#coaches') return 'coaches'
+  if (h === '#privacy') return 'privacy'
+  if (h === '#terms') return 'terms'
+  if (h === '#refund') return 'refund'
+  return 'home'
+}
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -50,7 +58,7 @@ export default function App() {
     html.style.scrollBehavior = 'auto'
 
     const handleScroll = () => {
-      if (route === 'coaches') {
+      if (route === 'coaches' || route === 'privacy' || route === 'terms' || route === 'refund') {
         window.scrollTo(0, 0)
       } else if (route === 'home') {
         const hash = window.location.hash
@@ -108,6 +116,9 @@ export default function App() {
         <FAQ />
       </div>
       {route === 'coaches' && <CoachesPage onOpenContact={openContact} />}
+      {route === 'privacy' && <PolicyPage type="privacy" />}
+      {route === 'terms' && <PolicyPage type="terms" />}
+      {route === 'refund' && <PolicyPage type="refund" />}
       <Footer onOpenContact={openContact} />
       <ContactForm isOpen={contactOpen} onClose={closeContact} />
     </LanguageContext.Provider>
