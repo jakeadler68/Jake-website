@@ -13,6 +13,22 @@ export default function AboutSection() {
   return (
     <section className="about-section" id="about">
       <div className="container">
+
+        <div className="about-stats reveal">
+          <div>
+            <span className="about-stat-num">{a.stat1num}</span>
+            <span className="about-stat-label">{a.stat1label}</span>
+          </div>
+          <div>
+            <span className="about-stat-num">{a.stat2num}</span>
+            <span className="about-stat-label">{a.stat2label}</span>
+          </div>
+          <div>
+            <span className="about-stat-num">{a.stat3num}</span>
+            <span className="about-stat-label">{a.stat3label}</span>
+          </div>
+        </div>
+
         <div className="about-grid">
 
           <div className="about-image reveal">
@@ -27,35 +43,19 @@ export default function AboutSection() {
             {a.p3 && <p>{a.p3}</p>}
             {a.p4 && <p>{a.p4}</p>}
             {a.p5 && <p>{a.p5}</p>}
-          </div>
-
-          <div className="about-buttons reveal">
-            <button
-              className={`about-action-btn${philosophyOpen ? ' open' : ''}`}
-              onClick={() => setPhilosophyOpen(o => !o)}
-              aria-expanded={philosophyOpen}
-            >
-              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
-              <span className="about-btn-plus">+</span>
-            </button>
-            <a href="#coaches" className="about-action-btn">
-              <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.coachesBtn}</span>
-              <span className="about-btn-plus">+</span>
-            </a>
-          </div>
-
-          <div className="about-stats reveal">
-            <div>
-              <span className="about-stat-num">{a.stat1num}</span>
-              <span className="about-stat-label">{a.stat1label}</span>
-            </div>
-            <div>
-              <span className="about-stat-num">{a.stat2num}</span>
-              <span className="about-stat-label">{a.stat2label}</span>
-            </div>
-            <div>
-              <span className="about-stat-num">{a.stat3num}</span>
-              <span className="about-stat-label">{a.stat3label}</span>
+            <div className="about-buttons">
+              <button
+                className={`about-action-btn${philosophyOpen ? ' open' : ''}`}
+                onClick={() => setPhilosophyOpen(o => !o)}
+                aria-expanded={philosophyOpen}
+              >
+                <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.philosophyLabel}</span>
+                <span className="about-btn-plus">+</span>
+              </button>
+              <a href="#coaches" className="about-action-btn">
+                <span className="section-label" style={{ letterSpacing: '0.12em' }}>{a.coachesBtn}</span>
+                <span className="about-btn-plus">+</span>
+              </a>
             </div>
           </div>
 
@@ -74,6 +74,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )
