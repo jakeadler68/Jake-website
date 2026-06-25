@@ -113,7 +113,7 @@ h1, h2, h3, h4 {
 }
 
 /* Section Styles */
-section { padding: 80px 0; }
+section { padding: 40px 0; }
 .section-label {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
@@ -136,9 +136,6 @@ section { padding: 80px 0; }
 }
 
 /* Global Responsive */
-@media (max-width: 1024px) {
-    section { padding: 60px 0; }
-}
 @media (max-width: 768px) {
     section { padding: 40px 0; }
     body { font-size: 1.02rem; font-weight: 400; }

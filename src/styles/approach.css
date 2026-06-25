@@ -4,11 +4,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-top: 48px;
+    margin-top: 28px;
 }
 .approach-card {
     text-align: center;
-    padding: 48px 36px;
+    padding: 32px 24px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 4px;
@@ -56,7 +56,7 @@
 /* About */
 
 @media (max-width: 1024px) {
-    .approach-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+    .approach-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 20px; }
     .approach-materials-toggle-row { grid-template-columns: 1fr; }
     .approach-materials-toggle-row > div { display: none; }
     .approach-grid .approach-card:last-child {
@@ -78,5 +78,5 @@
         width: auto;
     }
     .approach-grid { grid-template-columns: 1fr; gap: 20px; }
-    .approach-card { padding: 32px 24px; }
+    .approach-card { padding: 24px 20px; }
 }

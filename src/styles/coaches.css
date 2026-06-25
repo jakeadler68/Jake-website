@@ -29,7 +29,7 @@
     font-size: 1.05rem;
     line-height: 1.7;
 }
-.coaches-grid-section { padding: 72px 0 96px; }
+.coaches-grid-section { padding: 40px 0; }
 .coaches-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -146,8 +146,8 @@
 .coach-card-placeholder .coach-name { color: var(--text-light, #555); }
 .coaches-footer-cta {
     text-align: center;
-    margin-top: 72px;
-    padding-top: 56px;
+    margin-top: 48px;
+    padding-top: 36px;
     border-top: 1px solid rgba(19,18,31,0.06);
 }
 .coaches-footer-cta h3 {
@@ -160,7 +160,7 @@
 @media (max-width: 768px) {
     .coaches-page { padding-top: 64px; }
     .coaches-title { font-size: 2.2rem; }
-    .coaches-grid-section { padding: 48px 0 64px; }
+    .coaches-grid-section { padding: 40px 0; }
     .coaches-grid { gap: 20px; }
     .coach-card-body { padding: 22px; }
 }

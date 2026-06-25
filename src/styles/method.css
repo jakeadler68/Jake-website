@@ -4,10 +4,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-top: 48px;
+    margin-top: 28px;
 }
 .method-card {
-    padding: 48px 36px;
+    padding: 32px 24px;
     background: var(--cream);
     border: 1px solid rgba(0,0,0,0.04);
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
@@ -38,7 +38,7 @@
 
 /* Philosophy accordion */
 .philosophy-accordion {
-    margin-top: 48px;
+    margin-top: 28px;
     border-top: 1px solid rgba(19,18,31,0.08);
 }
 .philosophy-accordion-toggle {
@@ -140,7 +140,7 @@
 /* Programs */
 
 @media (max-width: 1024px) {
-    .method-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+    .method-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 20px; }
     .method-grid .method-card:last-child {
         grid-column: 1 / -1;
         justify-self: center;
@@ -160,7 +160,7 @@
         width: auto;
     }
     .method-grid { grid-template-columns: 1fr; gap: 20px; }
-    .method-card { padding: 32px 24px; }
+    .method-card { padding: 24px 20px; }
     .method-card p { font-size: 1rem; }
     .philosophy-heading { font-size: 1.7rem; margin-bottom: 24px; }
     .philosophy-grid { grid-template-columns: 1fr; gap: 14px; }

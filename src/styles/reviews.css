@@ -3,8 +3,8 @@
 .reviews-tabs {
     display: flex;
     gap: 8px;
-    margin-top: 48px;
-    margin-bottom: 40px;
+    margin-top: 24px;
+    margin-bottom: 24px;
     flex-wrap: wrap;
 }
 .review-tab {
@@ -154,7 +154,7 @@
 .reviews-actions {
     display: flex;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 24px;
 }
 .reviews-actions .btn-secondary {
     background: var(--dark);
