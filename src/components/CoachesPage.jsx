@@ -35,14 +35,17 @@ export default function CoachesPage({ onOpenContact }) {
               </div>
             </article>
 
-            <article className="coach-card coach-card-placeholder reveal reveal-delay-1">
-              <div className="coach-card-image coach-card-image-empty">
-                <span className="coach-placeholder-icon">+</span>
+            <article className="coach-card reveal reveal-delay-1">
+              <div className="coach-card-image">
+                <img src="/img/haydn.jpg" alt="Haydn — Coach & IELTS Specialist" loading="lazy" />
+                <span className="coach-badge">{c.haydnBadge}</span>
               </div>
               <div className="coach-card-body">
-                <h2 className="coach-name">{c.comingSoonName}</h2>
-                <p className="coach-role">{c.comingSoonRole}</p>
-                <p className="coach-philosophy">{c.comingSoonText}</p>
+                <h2 className="coach-name">{c.haydnName}</h2>
+                <p className="coach-role">{c.haydnRole}</p>
+                {c.haydnBio.map((para, i) => (
+                  <p key={i} className="coach-bio-para">{para}</p>
+                ))}
               </div>
             </article>
           </div>
