@@ -29,44 +29,72 @@ export const translations = {
     },
 
     method: {
-      label: 'How It Works',
-      title: 'A Clear Process, Tailored to the Individual',
-      desc: 'Focus on expression, not just correctness.',
+      label: 'HOW IT WORKS',
+      title: 'Our Coaching Process',
+      desc: 'Every learner follows the same philosophy while receiving a personalized coaching experience. We begin with curiosity, develop clarity through meaningful communication, and build lasting confidence through consistent practice.',
       cards: [
         {
           num: '01',
-          title: 'We Identify the Starting Point',
-          text: 'We begin with a conversation to understand current ability and communication style. No tests. Just a real conversation.',
+          title: 'Discover the Starting Point',
+          text: 'Every learner begins with a conversation, not a test. We take time to understand current abilities, communication habits, goals, and interests so we can build from a strong foundation.',
         },
         {
           num: '02',
-          title: 'We Build Clear Expression',
-          text: 'We guide full ideas first, then refine accuracy through feedback. Participants practice speaking in full sentences about things they already know.',
+          title: 'Explore. Organize. Express.',
+          text: 'Through thoughtful questions and meaningful conversation, learners develop ideas, organize their thinking, and communicate with increasing clarity and confidence. We encourage learners to look beyond their first answer and express ideas more effectively.',
         },
         {
           num: '03',
-          title: "Progress Doesn't Stop After the Session",
-          text: 'Communication improves beyond sessions through real-world use. English improves not just during sessions, but in how people think, speak, and respond.',
+          title: 'Growth Continues Between Lessons',
+          text: 'Real learning happens between sessions as learners begin noticing more, communicating more naturally, and applying new skills in everyday situations. Our goal is to develop habits that continue long after each lesson ends.',
+        },
+      ],
+    },
+
+    learningExperience: {
+      label: 'THE LEARNING EXPERIENCE',
+      title: 'What to Expect',
+      desc: 'A practical look at what happens when you become an Exprimio learner.',
+      cards: [
+        {
+          title: 'Personalized Coaching',
+          text: 'Every learner receives an individualized study pathway based on their goals, current level, interests, and learning style. Lessons evolve as learners progress.',
+        },
+        {
+          title: 'Interactive Online Classroom',
+          text: 'Lessons are delivered through ClassIn, a professional online classroom designed specifically for education. Learners benefit from interactive whiteboards, screen sharing, annotation tools, audio, video, and lesson recordings for review.',
+        },
+        {
+          title: 'High-Quality Learning Materials',
+          text: 'We combine carefully selected resources from publishers such as Cambridge and National Geographic with original Exprimio materials, guided discussions, and real-world communication activities.',
+        },
+        {
+          title: 'Homework & Progress',
+          text: 'Meaningful homework reinforces learning between lessons while regular progress updates help learners and families understand strengths, opportunities for growth, and next steps.',
+        },
+        {
+          title: 'Built Around Communication',
+          text: 'Every part of our coaching is designed to help learners think more clearly, communicate more confidently, and continue growing beyond each lesson.',
         },
       ],
     },
 
     approach: {
-      label: 'What Makes This Different',
-      title: 'You Already Know More Than You Can Express. We Help You Show It.',
-      desc: "We don't start with vocabulary lists or drills. We start with what you already know and help you say it clearly in English.",
+      label: 'WHAT MAKES THIS DIFFERENT',
+      title: 'Communication Begins With Curiosity.',
+      desc: "Great communication doesn't begin with memorizing more words. It begins with curiosity. We help learners explore ideas, organize their thoughts, and express them with increasing clarity and confidence.",
       cards: [
         {
-          title: 'People Know More Than They Can Say',
-          text: 'They have ideas and opinions. They just need help getting them out in English.',
+          title: 'Curiosity Comes First',
+          text: 'Every meaningful conversation begins with a question. We encourage learners to stay curious, explore ideas, and look beyond their first answer.',
         },
         {
-          title: 'Say It. Then Say It Better.',
-          text: 'We focus on full sentences first. The right answer comes second.',
+          title: 'Clarity Through Exploration',
+          text: 'By noticing meaningful details and organizing their thoughts, learners discover they can communicate far more clearly than they first imagined.',
         },
         {
-          title: 'Confidence Comes From Doing, Not Drilling',
-          text: 'Confidence is built by speaking - in every session, from day one.',
+          title: 'Confidence Follows',
+          text: "Confidence isn't something we give learners. It grows naturally as they think more clearly, communicate more effectively, and experience real success.",
         },
       ],
     },
@@ -598,43 +626,71 @@ export const translations = {
 
     method: {
       label: '学习方式',
-      title: '路径清晰，因材施教',
-      desc: '专注表达，而非单纯纠错。',
+      title: '我们的辅导流程',
+      desc: '每位学习者在接受个性化辅导体验的同时，遵循相同的学习理念。我们从好奇心出发，通过有意义的沟通培养清晰表达，并通过持续练习建立持久的自信。',
       cards: [
         {
           num: '01',
-          title: '确定起点',
-          text: '我们从一段对话开始，了解学员当前的能力和表达风格。无需测试，只需真实交流。',
+          title: '发现起点',
+          text: '每位学习者都从一段对话开始，而非测试。我们花时间了解学员当前的能力、沟通习惯、目标和兴趣，以便在扎实的基础上构建学习。',
         },
         {
           num: '02',
-          title: '建立清晰表达',
-          text: '我们引导学员先完整表达想法，再通过反馈提升准确性。学员练习用完整句子表达自己已经熟悉的内容。',
+          title: '探索·整理·表达',
+          text: '通过有启发性的问题和有意义的对话，学习者逐渐形成想法、整理思维，并以越来越清晰、自信的方式进行表达。我们鼓励学习者超越最初的答案，更有效地表达想法。',
         },
         {
           num: '03',
-          title: '课后进步不停止',
-          text: '沟通能力在课后通过真实应用持续提升。英语不仅在课堂上进步，更体现在思维、表达和应对方式上。',
+          title: '成长在课后延续',
+          text: '真正的学习发生在课堂之间——当学习者开始注意到更多、更自然地沟通，并在日常情境中运用新技能时。我们的目标是培养在每节课结束后仍能持续发展的习惯。',
+        },
+      ],
+    },
+
+    learningExperience: {
+      label: '学习体验',
+      title: '学员可以期待什么',
+      desc: '成为Exprimio学员后，实际会发生什么——一个务实的说明。',
+      cards: [
+        {
+          title: '个性化辅导',
+          text: '每位学习者都会根据其目标、当前水平、兴趣和学习风格，获得个性化的学习路径。课程会随着学习者的进步而不断调整。',
+        },
+        {
+          title: '互动在线课堂',
+          text: '课程通过ClassIn专业在线教育平台进行。学习者可享受互动白板、屏幕共享、批注工具、音视频功能，以及用于课后复习的课程录制。',
+        },
+        {
+          title: '高质量学习材料',
+          text: '我们将剑桥、国家地理等出版商精心挑选的资源，与Exprimio原创材料、引导式讨论及真实沟通活动相结合。',
+        },
+        {
+          title: '作业与进步',
+          text: '有意义的课后作业巩固课堂所学，定期的进度更新帮助学习者和家庭了解优势、成长空间及下一步方向。',
+        },
+        {
+          title: '以沟通为核心',
+          text: '我们辅导的每个环节都旨在帮助学习者更清晰地思考、更自信地沟通，并在每节课结束后持续成长。',
         },
       ],
     },
 
     approach: {
       label: '我们的不同之处',
-      title: '你懂得的远超你能表达的，我们帮你展现出来',
-      desc: '我们不从单词表或操练开始，而是从你已有的知识入手，帮你用英语清楚地表达出来。',
+      title: '沟通始于好奇心。',
+      desc: '出色的沟通不是从记忆更多词汇开始的，而是从好奇心开始的。我们帮助学习者探索想法、整理思路，并以越来越清晰、自信的方式表达出来。',
       cards: [
         {
-          title: '人们懂得的超过他们能说出来的',
-          text: '他们有想法和见解，只是需要帮助把它们用英语表达出来。',
+          title: '好奇心优先',
+          text: '每一次有意义的对话都始于一个问题。我们鼓励学习者保持好奇心，探索想法，并超越最初的答案去思考。',
         },
         {
-          title: '说出来，再说得更好',
-          text: '我们首先关注完整句子，正确答案是其次。',
+          title: '在探索中获得清晰',
+          text: '通过留意有意义的细节并整理自己的思路，学习者会发现自己能够比最初想象的更清晰地进行沟通。',
         },
         {
-          title: '自信来自实践，而非操练',
-          text: '自信是通过开口说话建立的——从第一节课开始，每节课都是如此。',
+          title: '自信随之而来',
+          text: '自信不是我们给予学习者的东西，而是随着他们思维更加清晰、沟通更加有效、体验到真实成功而自然生长的。',
         },
       ],
     },

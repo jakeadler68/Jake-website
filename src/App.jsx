@@ -4,6 +4,7 @@ import MobileMenu from './components/MobileMenu'
 import Hero from './components/Hero'
 import TrustBar from './components/TrustBar'
 import MethodSection from './components/MethodSection'
+import LearningExperienceSection from './components/LearningExperienceSection'
 import ProgramsSection from './components/ProgramsSection'
 import ProgramModal from './components/ProgramModal'
 import ApproachSection from './components/ApproachSection'
@@ -110,6 +111,7 @@ export default function App() {
         <Hero onOpenContact={openContact} />
         <TrustBar />
         <MethodSection />
+        <LearningExperienceSection />
         <ApproachSection />
         <ProgramsSection onOpenProgram={openProgram} />
         <ProgramModal programKey={programModal} onClose={closeProgram} onOpenContact={openContact} />
