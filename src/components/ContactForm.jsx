@@ -108,6 +108,50 @@ export default function ContactForm({ isOpen, onClose }) {
             </div>
             <div className="form-row">
               <div className="form-group">
+                <label>{cf.labels.weeklySessionsLabel}</label>
+                <div className="select-wrapper">
+                  <select name="weekly_sessions" defaultValue="">
+                    {cf.sessionsOptions.map(opt => (
+                      <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="form-group" />
+            </div>
+            <div className="form-section-divider">
+              <span>{cf.labels.summerSection}</span>
+              <p className="form-section-note">{cf.summerNote}</p>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label>{cf.labels.summerDays}</label>
+                <div className="day-checkboxes">
+                  {dayKeys.map(d => (
+                    <label key={d} className="day-checkbox-item">
+                      <input type="checkbox" name="summer_days" value={d} />
+                      <span>{cf.days[d]}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+              <div className="form-group">
+                <label>{cf.labels.summerTime}</label>
+                <div className="select-wrapper">
+                  <select name="summer_preferred_time" defaultValue="">
+                    {cf.timeOptions.map(opt => (
+                      <option key={opt.value} value={opt.value} disabled={opt.disabled}>{opt.label}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div className="form-section-divider">
+              <span>{cf.labels.schoolTermSection}</span>
+              <p className="form-section-note">{cf.schoolTermNote}</p>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
                 <label>{cf.labels.days}</label>
                 <div className="day-checkboxes">
                   {dayKeys.map(d => (

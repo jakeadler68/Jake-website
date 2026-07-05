@@ -32,6 +32,7 @@ export default function FAQ() {
                 </button>
                 <div className="faq-answer">
                   {faq.a.split('\n\n').map((para, j) => <p key={j}>{para}</p>)}
+                  {faq.link && <p><a href={faq.link.href} className="faq-link">{faq.link.text}</a></p>}
                 </div>
               </div>
             ))}
@@ -47,6 +48,7 @@ export default function FAQ() {
                   </button>
                   <div className="faq-answer">
                     <p>{faq.a}</p>
+                    {faq.link && <p><a href={faq.link.href} className="faq-link">{faq.link.text}</a></p>}
                   </div>
                 </div>
               )

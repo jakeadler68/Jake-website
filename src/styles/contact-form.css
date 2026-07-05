@@ -167,6 +167,25 @@
     color: var(--text-light);
 }
 
+.form-section-divider {
+    margin: 12px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.form-section-divider span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--dark);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.form-section-note {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 4px;
+    font-weight: 300;
+}
+
 .enquiry-form textarea { resize: vertical; min-height: 80px; }
 .enquiry-form .form-submit {
     width: 100%;
