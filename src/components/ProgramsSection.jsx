@@ -9,7 +9,7 @@ export default function ProgramsSection({ onOpenProgram }) {
   const p = t.programs
   const programs = p.items
 
-  const [selected, setSelected] = useState('group')
+  const [selected, setSelected] = useState('coaching')
   const [activeIndex, setActiveIndex] = useState(0)
   const gridRef = useRef(null)
 

@@ -13,15 +13,15 @@ export default function ReviewsSection({ onOpenVideo }) {
   const [filter, setFilter] = useState('all')
   const [activeIndex, setActiveIndex] = useState(0)
   const viewportRef = useRef(null)
+  const shuffled = useRef([...reviews].sort(() => Math.random() - 0.5)).current
 
   const tabs = [
     { key: 'all', label: r.tabs.all },
-    { key: 'group', label: r.tabs.group },
     { key: '1on1', label: r.tabs.oneon1 },
     { key: 'ielts', label: r.tabs.ielts },
   ]
 
-  const filtered = reviews.filter(rv => filter === 'all' || rv.category.includes(filter))
+  const filtered = shuffled.filter(rv => filter === 'all' || rv.category.includes(filter))
 
   useEffect(() => {
     if (viewportRef.current) {

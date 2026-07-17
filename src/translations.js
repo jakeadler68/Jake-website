@@ -23,7 +23,7 @@ export const translations = {
       item2strong: 'CURIOSITY FIRST',
       item2: 'Communication begins with curiosity, not memorization',
       item3strong: 'INDIVIDUAL FOCUS',
-      item3: 'Personalized coaching, even within group sessions',
+      item3: 'Personalized coaching at every level',
       item4strong: '10+ YEARS',
       item4: 'Years of coaching experience per coach',
     },
@@ -101,18 +101,10 @@ export const translations = {
 
     programs: {
       label: 'PROGRAMS',
-      title: 'Three programs. One commitment.',
+      title: 'Two programs. One commitment.',
       desc: 'Every program is personalised to the individual\'s level. Choose what works best for you.',
       learnMore: 'Learn More',
       items: [
-        {
-          key: 'group',
-          tag: 'GROUP WORKSHOPS',
-          name: 'Group Workshops',
-          highlight: 'Shared-room practice',
-          desc: 'Small groups (usually 3–6 students) focused on speaking, understanding, and confidence.',
-          badge: 'MOST POPULAR',
-        },
         {
           key: 'coaching',
           tag: '1-ON-1 COACHING',
@@ -130,17 +122,6 @@ export const translations = {
         },
       ],
       modal: {
-        group: {
-          badge: 'GROUP WORKSHOPS',
-          title: 'Group Workshops',
-          desc: 'Small groups (usually 3–6 students) focused on speaking, understanding, and confidence.',
-          features: [
-            { title: 'Small Groups. Real Speaking.', text: 'Every student speaks in every session. Groups are carefully matched by level and age.' },
-            { title: 'Speak About Real Ideas', text: 'We don\'t rely only on textbooks. Students discuss real topics and express ideas they already understand.' },
-            { title: 'Consistent Weekly Schedule', text: 'Same group, same time each week. This builds momentum and real progress.' },
-            { title: 'Learn With Others', text: 'Students improve faster when they speak with peers, especially with new people. This creates a natural, low-pressure environment.' },
-          ],
-        },
         coaching: {
           badge: 'MOST POPULAR',
           title: '1-on-1 Coaching',
@@ -217,7 +198,7 @@ export const translations = {
       label: 'WHAT CLIENTS SAY',
       title: 'Real feedback from people who\'ve gone through the process.',
       desc: 'No cherry-picked one-liners. Real feedback from families who\'ve committed to the process.',
-      tabs: { all: 'All', group: 'Group Sessions', oneon1: '1-on-1', ielts: 'IELTS' },
+      tabs: { all: 'All', oneon1: '1-on-1', ielts: 'IELTS' },
       videoTitle: 'Hear from clients directly',
       videoDesc: 'Short video testimonials from families who\'ve seen the transformation.',
       items: [
@@ -290,7 +271,7 @@ export const translations = {
         { q: 'How is this different from other English coaching?', a: 'Most coaching focuses on test preparation, vocabulary lists, and grammar rules in isolation. Exprimio focuses on the learner\'s ability to think clearly, organize ideas, and communicate effectively in English. We use real conversation and meaningful topics as the foundation. Grammar and vocabulary are developed within that context — as tools that serve communication, not as goals in themselves.' },
         { q: 'What learning materials do you use?', a: 'Following an initial assessment, learning materials are selected based on each student\'s age, English level, academic needs, and learning goals.\n\nOur instructors use a combination of internationally recognized resources from publishers such as Cambridge, National Geographic Learning, Oxford, and other trusted educational providers. Depending on the student\'s needs, lessons may incorporate structured curriculum materials, reading programs, speaking activities, exam preparation resources, or customized content.\n\nWe do not believe every student should follow the same textbook. Instead, materials are chosen to provide the right balance of challenge, engagement, and measurable progress for each learner.\n\nAs students develop, materials may be adjusted to reflect changing goals, strengths, and areas for improvement. We also welcome discussion regarding school materials or other learning resources that families would like us to consider.\n\nIf you have questions about our curriculum or material selection process, please feel free to contact us.' },
         { q: 'How does a session work?', a: 'Sessions are delivered online through ClassIn, a professional platform designed specifically for education. Sessions run from 30 minutes to 2 hours depending on the program. Each session is guided by curiosity and conversation — learners are encouraged to explore ideas, ask questions, and develop their thinking through meaningful communication.' },
-        { q: 'How much does it cost?', a: 'Pricing is listed in each program\'s package details — check out Group, 1‑on‑1, or IELTS to find what fits.', link: { text: 'See programs & pricing →', href: '#programs' } },
+        { q: 'How much does it cost?', a: 'Pricing is listed in each program\'s package details — check out 1‑on‑1 Coaching or IELTS to find what fits.', link: { text: 'See programs & pricing →', href: '#programs' } },
         { q: 'When will I see improvement?', a: 'Learners typically notice increased confidence and communication clarity within 4–6 weeks. More significant growth in fluency and independent thinking usually becomes visible around 3–4 months. Exprimio is not a quick-fix program — the goal is lasting ability and real confidence, developed through consistent, meaningful practice.' },
         { q: 'How do I know they\'re improving?', a: 'Every program includes regular progress updates. You receive structured feedback covering areas of growth, current focus, and practical suggestions for continuing development between lessons. Frequency depends on the program chosen.' },
         { q: 'My English level is quite basic. Is that okay?', a: 'Absolutely. Many of our learners start with limited confidence in English. Our approach is designed to meet people exactly where they are and build from there. We use what learners already understand as a starting point, and gradually develop their ability to think, organize, and communicate more clearly in English.' },
@@ -562,7 +543,7 @@ export const translations = {
       schoolTermNote: 'For lessons during the school year.',
       programOptions: [
         { value: '', label: 'Select a program', disabled: true },
-        { value: 'group', label: 'Group Sessions' },
+
         { value: 'coaching', label: '1-on-1 Coaching' },
         { value: 'jake', label: '1-on-1 Intensive' },
         { value: 'ielts', label: 'IELTS Specialist' },
@@ -711,18 +692,10 @@ export const translations = {
 
     programs: {
       label: '课程项目',
-      title: '三种课程，一个承诺',
+      title: '两种课程，一个承诺',
       desc: '每种课程均根据学员个人水平量身定制。选择最适合你的方式。',
       learnMore: '了解更多',
       items: [
-        {
-          key: 'group',
-          tag: '小组工作坊',
-          name: '小组工作坊',
-          highlight: '共同练习口语',
-          desc: '小班制（通常3–6人），专注口语表达、理解能力和自信心培养。',
-          badge: '最受欢迎',
-        },
         {
           key: 'coaching',
           tag: '一对一辅导',
@@ -740,17 +713,6 @@ export const translations = {
         },
       ],
       modal: {
-        group: {
-          badge: '小组工作坊',
-          title: '小组工作坊',
-          desc: '小班制（通常3–6人），专注口语表达、理解能力和自信心培养。',
-          features: [
-            { title: '小班制，真实口语', text: '每位学员在每节课都有开口机会。学员按水平和年龄精心分组。' },
-            { title: '围绕真实想法表达', text: '我们不依赖教材。学员讨论真实话题，表达他们已理解的想法。' },
-            { title: '固定的每周课程', text: '同一小组，每周同一时间。这建立了动力和真实的持续进步。' },
-            { title: '与他人共同学习', text: '学员在与同伴交流时进步更快，尤其是与新面孔互动。这创造了自然、低压的学习环境。' },
-          ],
-        },
         coaching: {
           badge: '最受欢迎',
           title: '一对一辅导',
@@ -827,7 +789,7 @@ export const translations = {
       label: '学员评价',
       title: '来自亲历整个过程的真实学员',
       desc: '不是精心挑选的片段，而是那些全程投入的家庭的真实反馈。',
-      tabs: { all: '全部', group: '小组课', oneon1: '一对一', ielts: '雅思' },
+      tabs: { all: '全部', oneon1: '一对一', ielts: '雅思' },
       videoTitle: '直接听学员分享',
       videoDesc: '来自亲历转变的家庭的简短视频证言。',
       items: [
@@ -1172,7 +1134,6 @@ export const translations = {
       schoolTermNote: '适用于学年期间（约9月至次年6月）的课程安排。',
       programOptions: [
         { value: '', label: '选择课程', disabled: true },
-        { value: 'group', label: '小组课程' },
         { value: 'coaching', label: '一对一辅导' },
         { value: 'jake', label: '一对一强化' },
         { value: 'ielts', label: '雅思专项' },
